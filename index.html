@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script type="text/javascript" src="script.js"></script>
+</head>
+<body onload="peupler()">
+<div class="container">
+    <div class="tete">
+        Calculateur nouvelle CCN :
+    </div>
+    <div class="formulaire">
+        <ul>
+            <li>Complexité de l'activité :<br/><select id="complexite"></select></li>
+            <li>Connaissances requises de l'activité :<br/><select id="connaissances"></select></li>
+            <li>Autonomie de l'activité :<br/><select id="autonomie"></select></li>
+            <li>Contribution de l'activité :<br/><select id="contribution"></select></li>
+            <li>Encadrement ou Coopération de l'activité :<br/><select id="encadrementcooperation"></select></li>
+            <li>Communication de l'activité :<br/><select id="communication"></select></li>
+        </ul>
+    </div>
+    <div class="bouton">
+        <button onclick="calcul()">Calculer</button>
+    </div>
+    <div class="calculs">
+        <table class="matable">
+            <tbody>
+                <tr><td>Cotation</td><td id="cotation" class="cotation"></td></tr>
+                <tr><td>Classe d'emploi</td><td id="classe" class="classe"></td></tr>
+                <tr><td>Groupe d'emploi</td><td id="groupe" class="groupe"></td></tr>
+                <tr><td>Niveau de diplôme correspondant au critère "connaissances"</td><td id="exconn" class="exconn"></td></tr>
+                <tr><td>Salaire minimum 35 heures<br/>(forfait heures : +15% ; forfait jours : +30%)</td><td id="salairemin" class="salairemin"><br/></td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="pied">
+        <a href="https://uimm.lafabriquedelavenir.fr/conventions-collectives-metallurgie/" target="newtab">Textes de la convention collective</a>
+    </div>
+</div>
+</body>
+</html>
