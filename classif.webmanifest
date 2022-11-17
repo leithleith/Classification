@@ -1,0 +1,22 @@
+{
+    "name": "Calculateur de classification de la nouvelle convention collective de la métallurgie",
+    "short_name": "classif",
+    "description": "Calculateur de classification de la nouvelle convention collective de la métallurgie",
+    "icons": [
+      {
+        "src": "icon32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+      {
+        "src": "icon512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "theme_color": "#1e1e1e",
+    "background_color": "#1e1e1e"
+  }
+  

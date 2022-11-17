@@ -1,3 +1,8 @@
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+};
+
+
 var complexite = [];
 var connaissances = [];
 var autonomie = [];
@@ -369,16 +374,16 @@ function calcul() {
             document.getElementById("exconn").innerHTML = 'Sans objet';
             break;
         case 3 :
-            document.getElementById("exconn").innerHTML = 'CAP, BEP...';
+            document.getElementById("exconn").innerHTML = 'CAP, BEP';
             break;
         case 4 :
-            document.getElementById("exconn").innerHTML = 'BP, BT, Bac Pro ou Techno...';
+            document.getElementById("exconn").innerHTML = 'BP, BT, Bac Pro ou Techno';
             break;
         case 5 :
-            document.getElementById("exconn").innerHTML = 'BTS, DUT...';
+            document.getElementById("exconn").innerHTML = 'BTS, DUT';
             break;
         case 6 :
-            document.getElementById("exconn").innerHTML = 'BTS, DUT, Licence...';
+            document.getElementById("exconn").innerHTML = 'BTS, DUT, Licence';
             break;
         case 7 :
             document.getElementById("exconn").innerHTML = 'Master';
@@ -396,4 +401,47 @@ function calcul() {
             document.getElementById("exconn").innerHTML = 'Erreur';
             break;
     }
+    data = [{
+        type: 'scatterpolar',
+        r: [parseInt(document.getElementById("complexite").value), parseInt(document.getElementById("connaissances").value), parseInt(document.getElementById("autonomie").value), parseInt(document.getElementById("contribution").value), parseInt(document.getElementById("encadrementcooperation").value), parseInt(document.getElementById("communication").value)],
+        theta: ['complexité','connaissances','autonomie', 'contribution', 'encadrement/coopération', 'communication'],
+        fill: 'toself'
+    }]
+    layout = {
+        polar: {
+            radialaxis: {
+                visible: true,
+                range: [1, 10],
+                ticks: '',
+                showline: false,
+                showticklabels: false,
+                layer: 'below traces'
+            }
+        },
+        showlegend: false,
+        title: {
+            text: 'Cotation ' + resultat + ' - Groupe ' +  document.getElementById('groupe').innerHTML + ' - Classe ' + document.getElementById('classe').innerHTML
+        },
+        autosize: true,
+        font: {
+            color: '#cdcccc'
+        },
+        paper_bgcolor: '#1e1e1e',
+    }
+    config = {
+        displayModeBar: true,
+        responsive: true,
+        displaylogo: false,
+        locale: 'fr',
+        modeBarButtonsToRemove: ['pan2d','select2d','lasso2d','resetScale2d','zoom2d'],
+        scrollZoom: false,
+        toImageButtonOptions: {
+            filename: resultat + document.getElementById('groupe').innerHTML + document.getElementById('classe').innerHTML + '-' + Date.now(),
+            height: 800,
+            width: 800
+        }
+    }
+    Plotly.newPlot("radar", data, layout, config);
+    document.getElementById("calculs").style.visibility = 'visible';
+    document.getElementById("radar").style.visibility = 'visible';
 }

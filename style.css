@@ -1,8 +1,6 @@
 body {
     background-color: #1e1e1e;
     color: #cdcccc;
-    width: fit-content;
-
 }
 a {
     color: #cdcccc;
@@ -20,17 +18,20 @@ button {
 .container {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
     row-gap: 20px;
     grid-template-areas:
         "tete"
         "formulaire"
         "bouton"
         "calculs"
+        "radar"
         "pied";
     border: 2px solid #8b0000;
     border-radius: 15px 50px 0px 50px;
     padding: 5px;
+    margin: auto;
+    width: fit-content;
 }
 .tete {
     font-size: large;
@@ -47,6 +48,7 @@ button {
 .calculs {
     grid-area: calculs;
     overflow-x:auto;
+    visibility: hidden;
 }
 .matable {
     border-collapse: collapse;
@@ -61,4 +63,7 @@ button {
 }
 .matable tr:nth-child(odd) {
     background-color: #555555;
+}
+.radar {
+    visibility: hidden;
 }
