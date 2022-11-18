@@ -415,7 +415,8 @@ function calcul() {
                 ticks: '',
                 showline: false,
                 showticklabels: false,
-                layer: 'below traces'
+                layer: 'below traces',
+                fixedrange: true
             }
         },
         showlegend: false,
@@ -442,6 +443,6 @@ function calcul() {
         }
     }
     Plotly.newPlot("radar", data, layout, config);
-    document.getElementById("calculs").style.visibility = 'visible';
+    document.getElementById("calculs").style.display = 'block';
     document.getElementById("radar").style.visibility = 'visible';
 }

@@ -1,4 +1,4 @@
-body {
+body {    
     background-color: #1e1e1e;
     color: #cdcccc;
 }
@@ -8,47 +8,40 @@ a {
 select {
     background-color: #1e1e1e;
     color: #cdcccc;
-    width: 300px;
+    max-width: 200px;
 }
 button {
     background-color: #8b0000;
     color: #cdcccc;
     border: 1 solid #cdcccc;
 }
-.container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto auto auto;
-    row-gap: 20px;
-    grid-template-areas:
-        "tete"
-        "formulaire"
-        "bouton"
-        "calculs"
-        "radar"
-        "pied";
+.conteneur {
     border: 2px solid #8b0000;
-    border-radius: 15px 50px 0px 50px;
-    padding: 5px;
+    border-radius: 0px 50px 0px 50px;
     margin: auto;
     width: fit-content;
+    max-width: 100%;
+    background-image: url("logoUFICT.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    padding: 5px;
+}
+.sousconteneur {
+    position: relative;
 }
 .tete {
-    font-size: large;
+    text-align: right;
 }
 .pied {
+    padding: 5px;
     text-align: right;
 } 
 .formulaire {
-    grid-area: formulaire;
-}
-.bouton {
-    grid-area: bouton;
+    text-align: right;
 }
 .calculs {
-    grid-area: calculs;
-    overflow-x:auto;
-    visibility: hidden;
+    padding: 5px;
+    display: none;
 }
 .matable {
     border-collapse: collapse;
