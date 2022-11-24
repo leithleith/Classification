@@ -1,20 +1,3 @@
-var toggle = false;
-
-function menu() {
-    if (toggle) {
-        document.getElementById("menu").style.visibility =  'hidden';
-        document.getElementById("menu").style.display = 'none';
-        document.getElementById("boutonmenu").innerHTML = '☰';
-        toggle = !toggle;
-    }
-    else {
-        document.getElementById("menu").style.visibility =  'visible';
-        document.getElementById("menu").style.display = 'block';
-        document.getElementById("boutonmenu").innerHTML = 'X';
-        toggle = !toggle;
-    }
-}
-
 function readFile()
 {
     document.getElementById("Messages").innerHTML = "";

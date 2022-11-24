@@ -14,18 +14,12 @@
     <div class="conteneur">
         <div id="tete">
             <img src="logoUFICT.png"/>
-            <button id="boutonmenu" onclick="menu()">☰</button>
             <h1>Analyse Classification</h1><hr/>
             <h2>Charger un fichier (individu) :</h2>
             <input type="file" accept=".csv" id="fileToLoad"><button class="boutoncharger" id="chargerindividu" onclick="readFile()">Charger</button>
             <hr/><h2>Charger plusieurs fichiers (groupe) :</h2>
             <input type="file" multiple="multiple" accept=".csv" id="filesToLoad"><button class="boutoncharger" id="chargergroupe" onclick="readFiles()">Charger</button>
             <hr/>
-        </div>
-        <div id="menu" class="menu">
-            <a href="index.html" target="indextab">Calculateur</a>
-            <br/>
-            <a href="https://uimm.lafabriquedelavenir.fr/conventions-collectives-metallurgie/" target="newtab">Textes de la convention collective</a>
         </div>
         <div id="Messages"></div>
         <div class="formulaire">
