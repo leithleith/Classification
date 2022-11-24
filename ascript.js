@@ -500,6 +500,13 @@ function readFile()
                     responsive: true,
                     displaylogo: false,
                     locale: 'fr',
+                    modeBarButtonsToAdd: [
+                        {
+                          name: 'Passer en plein écran',
+                          icon: Plotly.Icons.zoombox,
+                          click: function(gd) {
+                            document.getElementById("radar").requestFullscreen();
+                          }}],
                     modeBarButtonsToRemove: ['pan2d','select2d','lasso2d','resetScale2d','zoom2d'],
                     scrollZoom: false,
                     toImageButtonOptions: {
@@ -560,6 +567,13 @@ function readFiles()
             responsive: true,
             displaylogo: false,
             locale: 'fr',
+            modeBarButtonsToAdd: [
+                {
+                  name: 'Passer en plein écran',
+                  icon: Plotly.Icons.zoombox,
+                  click: function(gd) {
+                    document.getElementById("radar").requestFullscreen();
+                  }}],
             modeBarButtonsToRemove: ['pan2d','select2d','lasso2d','resetScale2d','zoom2d'],
             scrollZoom: false,
             toImageButtonOptions: {
@@ -594,4 +608,18 @@ function readFiles()
         }
         reader.readAsText(file);
     })
+}
+
+function pleinecran()
+{
+    document.getElementById("radar").addEventListener('fullscreenchange', (event) => {
+        if (document.fullscreenElement)
+        {
+            Plotly.relayout("radar", { autosize: true });
+        }
+        else
+        {
+            Plotly.relayout("radar", { width: document.getElementById("matable").offsetWidth , height: document.getElementById("matable").offsetHeight });
+        }
+    });
 }

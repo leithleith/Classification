@@ -2,9 +2,6 @@ body {
     background-color: #1e1e1e;
     color: #cdcccc;
 }
-a {
-    color: #cdcccc;
-}
 h1 {
     text-align: center;
 }
@@ -54,4 +51,17 @@ button {
 }
 .sauvegarder {
     visibility: hidden;
+}
+a:link, a:visited {
+    background-color: #555555;
+    color: #cdcccc;
+    border: 2px solid #1e1e1e;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+a:hover, a:active {
+    background-color: #cdcccc;
+    color: #1e1e1e;
 }
