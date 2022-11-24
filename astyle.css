@@ -16,15 +16,21 @@ h1 {
     max-width: 100%;
     padding: 5px;
 }
-select {
-    background-color: #1e1e1e;
-    color: #cdcccc;
-    max-width: 200px;
-}
 button {
     background-color: #8b0000;
     color: #cdcccc;
     border: 1 solid #cdcccc;
+}
+.radar {
+    visibility: hidden;
+}
+.pied {
+    padding: 5px;
+    text-align: right;
+}
+.menu {
+    visibility: hidden;
+    display: none;
 }
 .matable {
     visibility: collapse;
@@ -40,18 +46,4 @@ button {
 }
 .matable tr:nth-child(odd) {
     background-color: #555555;
-}
-.radar {
-    visibility: hidden;
-}
-.pied {
-    padding: 5px;
-    text-align: right;
-}
-.menu {
-    visibility: hidden;
-    display: none;
-}
-.sauvegarder {
-    visibility: hidden;
 }

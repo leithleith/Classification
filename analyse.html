@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Analyse de classification de la nouvelle convention collective de la métallurgie">
+    <meta name="author" content="UFICT Métallurgie CGT">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="astyle.css">
+    <script type="text/javascript" src="ascript.js"></script>
+    <script type="text/javascript" src="plotly-2.16.1.min.js"></script>
+    <script type="text/javascript" src="plotly-locale-fr.js"></script>
+</head>
+<body>
+    <div class="conteneur">
+        <div id="tete">
+            <img src="logoUFICT.png"/>
+            <button id="boutonmenu" onclick="menu()">☰</button>
+            <h1>Analyse Classification</h1><hr/>
+            <h2>Charger un fichier (individu) :</h2>
+            <input type="file" accept=".csv" id="fileToLoad"><button class="boutoncharger" id="chargerindividu" onclick="readFile()">Charger</button>
+            <hr/><h2>Charger plusieurs fichiers (groupe) :</h2>
+            <input type="file" multiple="multiple" accept=".csv" id="filesToLoad"><button class="boutoncharger" id="chargergroupe" onclick="readFiles()">Charger</button>
+            <hr/>
+        </div>
+        <div id="menu" class="menu">
+            <a href="index.html" target="indextab">Calculateur</a>
+            <br/>
+            <a href="https://uimm.lafabriquedelavenir.fr/conventions-collectives-metallurgie/" target="newtab">Textes de la convention collective</a>
+        </div>
+        <div id="Messages"></div>
+        <div class="formulaire">
+            <table id="matable" class="matable">
+                <tbody>
+                    <tr><td>Cotation</td><td id="cotation" class="cotation"></td></tr>
+                    <tr><td>Classe d'emploi</td><td id="classe" class="classe"></td></tr>
+                    <tr><td>Groupe d'emploi</td><td id="groupe" class="groupe"></td></tr>
+                    <tr><td>Niveau de diplôme / critère Connaissances</td><td id="exconn"></td></tr>
+                    <tr><td>Salaire minimum 35 heures<br/>(forfait heures : +15% ; forfait jours : +30%)</td><td id="salairemin"><br/></td></tr>
+                    <tr><td>Statut correspondant</td><td id="statut"></td></tr>
+                    <tr><td>Prime d'ancienneté</td><td id="prime"></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="radar" class="radar">
+        </div>
+    </div>
+</body>
+</html>
