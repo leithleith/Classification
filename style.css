@@ -52,7 +52,7 @@ button {
 .sauvegarder {
     visibility: hidden;
 }
-a:link, a:visited {
+.menu a:link, a:visited {
     background-color: #555555;
     color: #cdcccc;
     border: 2px solid #1e1e1e;
@@ -61,7 +61,7 @@ a:link, a:visited {
     text-decoration: none;
     display: inline-block;
 }
-a:hover, a:active {
+.menu a:hover, a:active {
     background-color: #cdcccc;
     color: #1e1e1e;
 }
