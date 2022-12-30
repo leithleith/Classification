@@ -2,11 +2,12 @@ self.importScripts('script.js');
 var cacheName = 'classif';
 var appShellFiles = [
   'index.html',
-  'style.css',
-  'script.js',
+  'classif.css',
+  'classif.js',
   'plotly-2.16.1.min.js',
   'plotly-locale-fr.js',
-  'logoUFICT.png'
+  'logoUFICT.png',
+  'cc.png'
 ];
 self.addEventListener('install', function(e) {
     e.waitUntil(
