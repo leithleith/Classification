@@ -380,24 +380,8 @@ function calcul() {
             paper_bgcolor: '#1e1e1e'
         }
         config = {
-            displayModeBar: true,
-            responsive: true,
-            displaylogo: false,
-            locale: 'fr',
-            modeBarButtonsToAdd: [
-                {
-                  name: 'Passer en plein écran',
-                  icon: Plotly.Icons.zoombox,
-                  click: function(gd) {
-                    document.getElementById("radar").requestFullscreen();
-                  }}],
-            modeBarButtonsToRemove: ['pan2d','select2d','lasso2d','resetScale2d','zoom2d'],
-            scrollZoom: false,
-            toImageButtonOptions: {
-                filename: resultat + document.getElementById('groupe').innerHTML + document.getElementById('classe').innerHTML + '-' + Date.now(),
-                height: 800,
-                width: 800
-            }
+            staticPlot: true,
+            responsive: true
         }
         Plotly.newPlot("radar", data, layout, config);
         document.getElementById("matable").style.visibility = 'visible';
@@ -930,24 +914,8 @@ function readFile()
                     paper_bgcolor: '#1e1e1e',
                 }
                 config = {
-                    displayModeBar: true,
-                    responsive: true,
-                    displaylogo: false,
-                    locale: 'fr',
-                    modeBarButtonsToAdd: [
-                        {
-                          name: 'Passer en plein écran',
-                          icon: Plotly.Icons.zoombox,
-                          click: function(gd) {
-                            document.getElementById("radar").requestFullscreen();
-                          }}],
-                    modeBarButtonsToRemove: ['pan2d','select2d','lasso2d','resetScale2d','zoom2d'],
-                    scrollZoom: false,
-                    toImageButtonOptions: {
-                        filename: resultat + groupe + classe + '-' + Date.now(),
-                        height: 800,
-                        width: 800
-                    }
+                    staticPlot: true,
+                    responsive: true
                 }
                 document.getElementById("Messages").innerHTML += "<hr/>";
                 Plotly.newPlot("radar", data, layout, config);
@@ -1038,8 +1006,8 @@ function readFiles()
                 type: 'scatterpolar',
                 r: [parseInt(ligne[0]),parseInt(ligne[1]),parseInt(ligne[2]),parseInt(ligne[3]),parseInt(ligne[4]),parseInt(ligne[5])],
                 theta: ['complexité','connaissances','autonomie', 'contribution', 'encadrement/coopération', 'communication'],
-                fill: 'toself',
-                hoverinfo: 'skip',
+                fill: 'none',
+                hoverinfo: 'name',
                 name: file.name.substring(15, file.name.length-4)
             });            
             if (n === (files.length))

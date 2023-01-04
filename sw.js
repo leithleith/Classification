@@ -4,10 +4,11 @@ var appShellFiles = [
   'index.html',
   'classif.css',
   'classif.js',
-  'plotly-2.16.1.min.js',
+  'plotly-classification.min.js',
   'plotly-locale-fr.js',
   'logoUFICT.png',
-  'cc.png'
+  'cc.png',
+  'qrcodeclassif.png'
 ];
 self.addEventListener('install', function(e) {
     e.waitUntil(
