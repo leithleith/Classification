@@ -24,8 +24,8 @@
         <button class="tablinks" onclick="opentab(event, 'Messages')">Journal</button>
     </div>
     <div id="individuel" class="tabcontent">
-        <h1>Analyse individuelle</h1>
-        <h2>Remplir directement un nouveau questionnaire, ou charger un fichier sauvegardé :</h2>
+        <h2>Analyse individuelle</h2>
+        <h3>Remplir un nouveau questionnaire<br/>Ou<br/>Charger un questionnaire sauvegardé</h3>
         <hr/>
         <input type="file" accept=".csv" id="fileToLoad"><button class="boutoncharger" id="chargerindividu" onclick="readFile()">Charger</button>
         <hr/>
@@ -38,8 +38,9 @@
             <li><select id="communication"><option selected="true" value="0" disabled>Communication</option><option value="1">L’emploi nécessite la compréhension des consignes et des échanges simples</option><option value="2">L’emploi nécessite questionnement, dialogue et reformulation avec des interlocuteurs de l’environnement immédiat</option><option value="3">L’emploi nécessite l’ajustement des réponses en fonction des interlocuteurs</option><option value="4">L’emploi nécessite communication démonstrative, argumentation</option><option value="5">L’emploi nécessite de parvenir à des constats/ décisions partagés/concertés avec des interlocuteurs à impliquer</option><option value="6">L’emploi nécessite coopération et partenariat avec des représentants d’autres entités</option><option value="7">L’emploi nécessite la recherche de l’adhésion/du compromis dans un contexte d’intérêts différents/divergents avec enjeux significatifs</option><option value="8">L’emploi nécessite négociations et représentation avec des acteurs majeurs et diversifiés</option><option value="9">L’emploi nécessite négociations complexes et représentation en lien avec les enjeux stratégiques</option><option value="10">L’emploi nécessite la mobilisation d’acteurs décisionnaires clés</option></select></li>
         </ol>
         <hr/>
-        <button onclick="calcul()">Calculer</button>
+        <button onclick="verification()">Calculer</button>
         <button id="sauvegarder" onclick="saveTextAsFile()">Sauvegarder</button>
+        <hr/>
         <table id="matable" class="matable">
             <tbody>
                 <tr><td>Cotation</td><td id="cotation" class="cotation"></td></tr>
@@ -54,37 +55,39 @@
         <hr/>
     </div>
     <div id="plusieurs" class="tabcontent">
-        <h1>Analyse groupée</h1>
-        <h2>Charger les fichiers sauvegardés d'un groupe :</h2>
+        <h2>Analyse groupée</h2>
+        <h3>Charger plusieurs fichiers sauvegardés</h3>
         <input type="file" multiple="multiple" accept=".csv" id="filesToLoad"><button class="boutoncharger" id="chargergroupe" onclick="readFiles()">Charger</button>
         <hr/>
         <table id="Statistiques" class="matable">
-            <tr><td></td><td>Complexité</td><td>Connaissances</td><td>Autonomie</td><td>Contribution</td><td>Encadrement/Coopération</td><td>Communication</td></tr>
-            <tr><td>Moyenne</td><td id="moycomplexite"></td><td id="moyconnaissances"></td><td id="moyautonomie"></td><td id="moycontribution"></td><td id="moyenccoop"></td><td id="moycommunication"></td></tr>
-            <tr><td>Médiane</td><td id="medcomplexite"></td><td id="medconnaissances"></td><td id="medautonomie"></td><td id="medcontribution"></td><td id="medenccoop"></td><td id="medcommunication"></td></tr>
-            <tr><td>Maximum</td><td id="maxcomplexite"></td><td id="maxconnaissances"></td><td id="maxautonomie"></td><td id="maxcontribution"></td><td id="maxenccoop"></td><td id="maxcommunication"></td></tr>
-            <tr><td>Minimum</td><td id="mincomplexite"></td><td id="minconnaissances"></td><td id="minautonomie"></td><td id="mincontribution"></td><td id="minenccoop"></td><td id="mincommunication"></td></tr>
+            <tr><td></td><td>Moyenne</td><td>Médiane</td><td>Minimum</td><td>Maximum</td></tr>
+            <tr><td>Cotation</td><td id="moycotation"></td><td id="medcotation"></td><td id="mincotation"></td><td id="maxcotation"></td></tr>
+            <tr><td>Complexité</td><td id="moycomplexite"></td><td id="medcomplexite"></td><td id="mincomplexite"></td><td id="maxcomplexite"></td></tr>
+            <tr><td>Connaissances</td><td id="moyconnaissances"></td><td id="medconnaissances"></td><td id="minconnaissances"></td><td id="maxconnaissances"></td></tr>
+            <tr><td>Autonomie</td><td id="moyautonomie"></td><td id="medautonomie"></td></td><td id="minautonomie"></td><td id="maxautonomie"></td></tr>
+            <tr><td>Contribution</td><td id="moycontribution"></td><td id="medcontribution"></td><td id="mincontribution"></td><td id="maxcontribution"></td></tr>
+            <tr><td>Encadrement/Coopération</td><td id="moyenccoop"></td><td id="medenccoop"></td><td id="minenccoop"></td><td id="maxenccoop"></td></tr>
+            <tr><td>Communication</td><td id="moycommunication"></td><td id="medcommunication"></td><td id="mincommunication"></td><td id="maxcommunication"></td></tr>
         </table>
     </div>
     <div id="about" class="tabcontent">
-        <h1>A propos</h1>
-        <h2>Un outil UFICT Métallurgie CGT :</h2>
+        <h2>A propos</h2>
+        <h3>Un outil UFICT Métallurgie CGT :</h3>
         <ul>
             <li>Respectueux de la vie priv&eacute;e et de l'anonymat</li>
-            <li>Mis à disposition selon les termes de la <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="cc">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a><br/><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="cc"><img src="cc.png"/></a></li>
-            <li>Code sous licence MIT dont bibliothèque graphique <a href="https://github.com/plotly/plotly.js" target="plotly">Plotly.js</a><br/><a href="https://github.com/leithleith/Classification" target="github"><svg height="64" fill="#ffffff" stroke="#000000" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="64" data-view-component="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a></li>
+            <li>Mis à disposition selon les termes de la <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="cc">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a></li>
+            <li><a href="https://github.com/leithleith/Classification" target="github">Code</a> sous licence MIT dont bibliothèque graphique <a href="https://github.com/plotly/plotly.js" target="plotly">Plotly.js</a></li>
             <li>Pour toute demande ou remarque : <a href="mailto:ufict@ftm-cgt.fr?subject=classif">contacter l'UFICT Métallurgie CGT</a></li>
-            <li>Partager l'application :<br/><img src="qrcodeclassif.png"/></li>
         </ul>
-        <h2><a href="https://uimm.lafabriquedelavenir.fr/conventions-collectives-metallurgie/" target="newtab">Textes de la convention collective</a></h2>
+        <h3><a href="https://uimm.lafabriquedelavenir.fr/conventions-collectives-metallurgie/" target="newtab">Textes de la convention collective</a></h3>
     </div>
     <div id="Messages" class="tabcontent">
-        <h1>Journal applicatif</h1>
+        <h2>Journal applicatif</h2>
     </div>
     <div id="radar" class="radar"></div>
     <div id="pied">
         <hr/>
-        <a href="https://github.com/leithleith/Classification" target="github"><svg height="32" fill="#ffffff" stroke="#000000" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="cc"><img src="cc.png"/></a>
+        <a href="https://github.com/leithleith/Classification" target="github"><svg height="32" fill="#ffffff" stroke="#000000" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="cc"><img src="cc.png"/></a><img src="qrcodeclassif.png" width="32" height="32"/>
     </div>
 </div>
 </body>

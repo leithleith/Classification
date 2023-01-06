@@ -3,6 +3,7 @@ body {
     font-size: medium;
     background-color: #1e1e1e;
     color: #cdcccc;
+    margin: 0px;
 }
 a {
     color: #cdcccc;
@@ -38,10 +39,12 @@ button {
 .matable td {
     padding: 5px;
     word-wrap: break-word;
-}
-.matable td:nth-child(even) {
     text-align: center;
     vertical-align: top;
+}
+.matable td:first-child {
+    text-align: left;
+    vertical-align: middle;
 }
 .matable tr:nth-child(odd) {
     background-color: #555555;
@@ -57,9 +60,9 @@ button {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 10px;
     transition: 0.3s;
-    font-size: 17px;
+    font-size: medium;
     color: #cdcccc;
   }
 .tab button:hover {
@@ -72,7 +75,4 @@ button {
   }
  .tabcontent {
     display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
   }

@@ -14,381 +14,406 @@ function opentab(evt, tabname) {
 	document.getElementById(tabname).style.display = "block";
 	evt.currentTarget.className += " active";
   }
-function calcul() {
-    var verification = parseInt(document.getElementById("complexite").value) * parseInt(document.getElementById("connaissances").value) * parseInt(document.getElementById("autonomie").value) * parseInt(document.getElementById("contribution").value) * parseInt(document.getElementById("encadrementcooperation").value) * parseInt(document.getElementById("communication").value);
-    if (verification != 0)
+function verification() {
+    if (parseInt(document.getElementById("complexite").value) != 0 && parseInt(document.getElementById("connaissances").value) != 0 && parseInt(document.getElementById("autonomie").value) != 0 && parseInt(document.getElementById("contribution").value) != 0 && parseInt(document.getElementById("encadrementcooperation").value) != 0 && parseInt(document.getElementById("communication").value) != 0)
     {
-        var resultat = parseInt(document.getElementById("complexite").value) + parseInt(document.getElementById("connaissances").value) + parseInt(document.getElementById("autonomie").value) + parseInt(document.getElementById("contribution").value) + parseInt(document.getElementById("encadrementcooperation").value) + parseInt(document.getElementById("communication").value) ;
-        document.getElementById('cotation').innerHTML =  resultat;
-        switch(resultat) {
-            case 60:
-            document.getElementById('classe').innerHTML = 18;
-            document.getElementById('groupe').innerHTML = "I";
-            document.getElementById('salairemin').innerHTML = 64500;
-            break;
-            case 59:
-            document.getElementById('classe').innerHTML = 18;
-            document.getElementById('groupe').innerHTML = "I";
-            document.getElementById('salairemin').innerHTML = 64500;
-            break;
-            case 58:
-            document.getElementById('classe').innerHTML = 18;
-            document.getElementById('groupe').innerHTML = "I";
-            document.getElementById('salairemin').innerHTML = 64500;
-            break;
-            case 57:
-            document.getElementById('classe').innerHTML = 17;
-            document.getElementById('groupe').innerHTML = "I";
-            document.getElementById('salairemin').innerHTML = 56000;
-            break;
-            case 56:
-            document.getElementById('classe').innerHTML = 17;
-            document.getElementById('groupe').innerHTML = "I";
-            document.getElementById('salairemin').innerHTML = 56000;
-            break;
-            case 55:
-            document.getElementById('classe').innerHTML = 17;
-            document.getElementById('groupe').innerHTML = "I";
-            document.getElementById('salairemin').innerHTML = 56000;
-            break;
-            case 54:
-            document.getElementById('classe').innerHTML = 16;
-            document.getElementById('groupe').innerHTML = "H";
-            document.getElementById('salairemin').innerHTML = 49000;
-            break;
-            case 53:
-            document.getElementById('classe').innerHTML = 16;
-            document.getElementById('groupe').innerHTML = "H";
-            document.getElementById('salairemin').innerHTML = 49000;
-            break;
-            case 52:
-            document.getElementById('classe').innerHTML = 16;
-            document.getElementById('groupe').innerHTML = "H";
-            document.getElementById('salairemin').innerHTML = 49000;
-            break;
-            case 51:
-            document.getElementById('classe').innerHTML = 15;
-            document.getElementById('groupe').innerHTML = "H";
-            document.getElementById('salairemin').innerHTML = 44000;
-            break;
-            case 50:
-            document.getElementById('classe').innerHTML = 15;
-            document.getElementById('groupe').innerHTML = "H";
-            document.getElementById('salairemin').innerHTML = 44000;
-            break;
-            case 49:
-            document.getElementById('classe').innerHTML = 15;
-            document.getElementById('groupe').innerHTML = "H";
-            document.getElementById('salairemin').innerHTML = 44000;
-            break;
-            case 48:
-            document.getElementById('classe').innerHTML = 14;
-            document.getElementById('groupe').innerHTML = "G";
-            document.getElementById('salairemin').innerHTML = 41000;
-            break;
-            case 47:
-            document.getElementById('classe').innerHTML = 14;
-            document.getElementById('groupe').innerHTML = "G";
-            document.getElementById('salairemin').innerHTML = 41000;
-            break;
-            case 46:
-            document.getElementById('classe').innerHTML = 14;
-            document.getElementById('groupe').innerHTML = "G";
-            document.getElementById('salairemin').innerHTML = 41000;
-            break;
-            case 45:
-            document.getElementById('classe').innerHTML = 13;
-            document.getElementById('groupe').innerHTML = "G";
-            document.getElementById('salairemin').innerHTML = 37400;
-            break;
-            case 44:
-            document.getElementById('classe').innerHTML = 13;
-            document.getElementById('groupe').innerHTML = "G";
-            document.getElementById('salairemin').innerHTML = 37400;
-            break;
-            case 43:
-            document.getElementById('classe').innerHTML = 13;
-            document.getElementById('groupe').innerHTML = "G";
-            document.getElementById('salairemin').innerHTML = 37400;
-            break;
-            case 42:
-            document.getElementById('classe').innerHTML = 12;
-            document.getElementById('groupe').innerHTML = "F";
-            document.getElementById('salairemin').innerHTML = 34300;
-            break;
-            case 41:
-            document.getElementById('classe').innerHTML = 12;
-            document.getElementById('groupe').innerHTML = "F";
-            document.getElementById('salairemin').innerHTML = 34300;
-            break;
-            case 40:
-            document.getElementById('classe').innerHTML = 12;
-            document.getElementById('groupe').innerHTML = "F";
-            document.getElementById('salairemin').innerHTML = 34300;
-            break;
-            case 39:
-            document.getElementById('classe').innerHTML = 11;
-            document.getElementById('groupe').innerHTML = "F";
-            document.getElementById('salairemin').innerHTML = 32500;
-            break;
-            case 38:
-            document.getElementById('classe').innerHTML = 11;
-            document.getElementById('groupe').innerHTML = "F";
-            document.getElementById('salairemin').innerHTML = 32500;
-            break;
-            case 37:
-            document.getElementById('classe').innerHTML = 11;
-            document.getElementById('groupe').innerHTML = "F";
-            document.getElementById('salairemin').innerHTML = 32500;
-            break;
-            case 36:
-            document.getElementById('classe').innerHTML = 10;
-            document.getElementById('groupe').innerHTML = "E";
-            document.getElementById('salairemin').innerHTML = 31400;
-            break;
-            case 35:
-            document.getElementById('classe').innerHTML = 10;
-            document.getElementById('groupe').innerHTML = "E";
-            document.getElementById('salairemin').innerHTML = 31400;
-            break;
-            case 34:
-            document.getElementById('classe').innerHTML = 10;
-            document.getElementById('groupe').innerHTML = "E";
-            document.getElementById('salairemin').innerHTML = 31400;
-            break;
-            case 33:
-            document.getElementById('classe').innerHTML = 9;
-            document.getElementById('groupe').innerHTML = "E";
-            document.getElementById('salairemin').innerHTML = 28400;
-            break;
-            case 32:
-            document.getElementById('classe').innerHTML = 9;
-            document.getElementById('groupe').innerHTML = "E";
-            document.getElementById('salairemin').innerHTML = 28400;
-            break;
-            case 31:
-            document.getElementById('classe').innerHTML = 9;
-            document.getElementById('groupe').innerHTML = "E";
-            document.getElementById('salairemin').innerHTML = 28400;
-            break;
-            case 30:
-            document.getElementById('classe').innerHTML = 8;
-            document.getElementById('groupe').innerHTML = "D";
-            document.getElementById('salairemin').innerHTML = 26400;
-            break;
-            case 29:
-            document.getElementById('classe').innerHTML = 8;
-            document.getElementById('groupe').innerHTML = "D";
-            document.getElementById('salairemin').innerHTML = 26400;
-            break;
-            case 28:
-            document.getElementById('classe').innerHTML = 8;
-            document.getElementById('groupe').innerHTML = "D";
-            document.getElementById('salairemin').innerHTML = 26400;
-            break;
-            case 27:
-            document.getElementById('classe').innerHTML = 7;
-            document.getElementById('groupe').innerHTML = "D";
-            document.getElementById('salairemin').innerHTML = 24400;
-            break;
-            case 26:
-            document.getElementById('classe').innerHTML = 7;
-            document.getElementById('groupe').innerHTML = "D";
-            document.getElementById('salairemin').innerHTML = 24400;
-            break;
-            case 25:
-            document.getElementById('classe').innerHTML = 7;
-            document.getElementById('groupe').innerHTML = "D";
-            document.getElementById('salairemin').innerHTML = 24400;
-            break;
-            case 24:
-            document.getElementById('classe').innerHTML = 6;
-            document.getElementById('groupe').innerHTML = "C";
-            document.getElementById('salairemin').innerHTML = 23500;
-            break;
-            case 23:
-            document.getElementById('classe').innerHTML = 6;
-            document.getElementById('groupe').innerHTML = "C";
-            document.getElementById('salairemin').innerHTML = 23500;
-            break;
-            case 22:
-            document.getElementById('classe').innerHTML = 6;
-            document.getElementById('groupe').innerHTML = "C";
-            document.getElementById('salairemin').innerHTML = 23500;
-            break;
-            case 21:
-            document.getElementById('classe').innerHTML = 5;
-            document.getElementById('groupe').innerHTML = "C";
-            document.getElementById('salairemin').innerHTML = 22300;
-            break;
-            case 20:
-            document.getElementById('classe').innerHTML = 5;
-            document.getElementById('groupe').innerHTML = "C";
-            document.getElementById('salairemin').innerHTML = 22300;
-            break;
-            case 19:
-            document.getElementById('classe').innerHTML = 5;
-            document.getElementById('groupe').innerHTML = "C";
-            document.getElementById('salairemin').innerHTML = 22300;
-            break;
-            case 18:
-            document.getElementById('classe').innerHTML = 4;
-            document.getElementById('groupe').innerHTML = "B";
-            document.getElementById('salairemin').innerHTML = 21200;
-            break;
-            case 17:
-            document.getElementById('classe').innerHTML = 4;
-            document.getElementById('groupe').innerHTML = "B";
-            document.getElementById('salairemin').innerHTML = 21200;
-            break;
-            case 16:
-            document.getElementById('classe').innerHTML = 4;
-            document.getElementById('groupe').innerHTML = "B";
-            document.getElementById('salairemin').innerHTML = 21200;
-            break;
-            case 15:
-            document.getElementById('classe').innerHTML = 3;
-            document.getElementById('groupe').innerHTML = "B";
-            document.getElementById('salairemin').innerHTML = 20300;
-            break;
-            case 14:
-            document.getElementById('classe').innerHTML = 3;
-            document.getElementById('groupe').innerHTML = "B";
-            document.getElementById('salairemin').innerHTML = 20300;
-            break;
-            case 13:
-            document.getElementById('classe').innerHTML = 3;
-            document.getElementById('groupe').innerHTML = "B";
-            document.getElementById('salairemin').innerHTML = 20300;
-            break;
-            case 12:
-            document.getElementById('classe').innerHTML = 2;
-            document.getElementById('groupe').innerHTML = "A";
-            document.getElementById('salairemin').innerHTML = 19700;
-            break;
-            case 11:
-            document.getElementById('classe').innerHTML = 2;
-            document.getElementById('groupe').innerHTML = "A";
-            document.getElementById('salairemin').innerHTML = 19700;
-            break;
-            case 10:
-            document.getElementById('classe').innerHTML = 2;
-            document.getElementById('groupe').innerHTML = "A";
-            document.getElementById('salairemin').innerHTML = 19700;
-            break;
-            case 9:
-            document.getElementById('classe').innerHTML = 1;
-            document.getElementById('groupe').innerHTML = "A";
-            document.getElementById('salairemin').innerHTML = 19420;
-            break;
-            case 8:
-            document.getElementById('classe').innerHTML = 1;
-            document.getElementById('groupe').innerHTML = "A";
-            document.getElementById('salairemin').innerHTML = 19420;
-            break;
-            case 7:
-            document.getElementById('classe').innerHTML = 1;
-            document.getElementById('groupe').innerHTML = "A";
-            document.getElementById('salairemin').innerHTML = 19420;
-            break;
-            case 6:
-            document.getElementById('classe').innerHTML = 1;
-            document.getElementById('groupe').innerHTML = "A";
-            document.getElementById('salairemin').innerHTML = 19420;
-            break;
-            default:
-            document.getElementById('classe').innerHTML = "Erreur";
-            document.getElementById('groupe').innerHTML = "Erreur";
-            document.getElementById('salairemin').innerHTML = "Erreur";
-        }
-        if (resultat > 36)
-        {
-            document.getElementById("statut").innerHTML = 'Cadre';
-            document.getElementById("prime").innerHTML = 'Pas de prime (Cadre)';
-        }
-        else if (resultat > 21 && resultat < 37)
-        {
-            document.getElementById("statut").innerHTML = 'Non Cadre<br/>mais<br/>ex Article 36 :<br/>passage Cadre ?';
-            document.getElementById("prime").innerHTML = document.getElementById('classe').innerHTML + '<br/>* valeur du point<br/>* ancienneté';
-        }
-        else {
-            document.getElementById("statut").innerHTML = 'Non Cadre';
-            document.getElementById("prime").innerHTML = document.getElementById('classe').innerHTML + '<br/>* valeur du point<br/>* ancienneté';
-        }
-        switch (parseInt(document.getElementById("connaissances").value)) {
-            case 1:
-                document.getElementById("exconn").innerHTML = 'Sans objet';
-                break;
-            case 2 :
-                document.getElementById("exconn").innerHTML = 'Sans objet';
-                break;
-            case 3 :
-                document.getElementById("exconn").innerHTML = 'CAP, BEP';
-                break;
-            case 4 :
-                document.getElementById("exconn").innerHTML = 'BP, BT, Bac Pro ou Techno';
-                break;
-            case 5 :
-                document.getElementById("exconn").innerHTML = 'BTS, DUT';
-                break;
-            case 6 :
-                document.getElementById("exconn").innerHTML = 'BTS, DUT, Licence';
-                break;
-            case 7 :
-                document.getElementById("exconn").innerHTML = 'Master';
-                break;
-            case 8 :
-                document.getElementById("exconn").innerHTML = 'Master, Doctorat';
-                break;
-            case 9 :
-                document.getElementById("exconn").innerHTML = 'Master, Doctorat';
-                break;
-            case 10 :
-                document.getElementById("exconn").innerHTML = 'Master, Doctorat';
-                break;
-            default:
-                document.getElementById("exconn").innerHTML = 'Erreur';
-                break;
-        }
-        data = [{
-            type: 'scatterpolar',
-            r: [parseInt(document.getElementById("complexite").value), parseInt(document.getElementById("connaissances").value), parseInt(document.getElementById("autonomie").value), parseInt(document.getElementById("contribution").value), parseInt(document.getElementById("encadrementcooperation").value), parseInt(document.getElementById("communication").value)],
-            theta: ['complexité','connaissances','autonomie', 'contribution', 'encadrement/coopération', 'communication'],
-            fill: 'toself',
-            hoverinfo: 'skip'
-        }]
-        layout = {
-            polar: {
-                radialaxis: {
-                    visible: true,
-                    range: [1, 10],
-                    ticks: '',
-                    showline: false,
-                    showticklabels: false,
-                    layer: 'below traces',
-                    fixedrange: true
-                }
-            },
-            showlegend: false,
-            title: {
-                text: 'Cotation ' + resultat + ' - Groupe ' +  document.getElementById('groupe').innerHTML + ' - Classe ' + document.getElementById('classe').innerHTML
-            },
-            autosize: true,
-            font: {
-                color: '#cdcccc'
-            },
-            paper_bgcolor: '#1e1e1e'
-        }
-        config = {
-            staticPlot: true,
-            responsive: true
-        }
-        Plotly.newPlot("radar", data, layout, config);
-        document.getElementById("matable").style.visibility = 'visible';
+        var vecteur = [];
+        vecteur.push(parseInt(document.getElementById("complexite").value));
+        vecteur.push(parseInt(document.getElementById("connaissances").value));
+        vecteur.push(parseInt(document.getElementById("autonomie").value));
+        vecteur.push(parseInt(document.getElementById("contribution").value));
+        vecteur.push(parseInt(document.getElementById("encadrementcooperation").value));
+        vecteur.push(parseInt(document.getElementById("communication").value));
+        calcul(vecteur);
     }
     else {
         alert("Tous les critères n'ont pas été renseignés !");
     }
+}
+function calcul(vecteur)
+{
+    var resultat = 0;
+    for (i = 0; i < vecteur.length; i++)
+    {
+        resultat += parseInt(vecteur[i]);
+    }
+    document.getElementById('cotation').innerHTML =  resultat;
+    var classe;
+    var groupe;
+    var salairemin;
+    switch(resultat)
+    {
+        case 60:
+        classe = 18;
+        groupe = "I";
+        salairemin = 64500;
+        break;
+        case 59:
+        classe = 18;
+        groupe = "I";
+        salairemin = 64500;
+        break;
+        case 58:
+        classe = 18;
+        groupe = "I";
+        salairemin = 64500;
+        break;
+        case 57:
+        classe = 17;
+        groupe = "I";
+        salairemin = 56000;
+        break;
+        case 56:
+        classe = 17;
+        groupe = "I";
+        salairemin = 56000;
+        break;
+        case 55:
+        classe = 17;
+        groupe = "I";
+        salairemin = 56000;
+        break;
+        case 54:
+        classe = 16;
+        groupe = "H";
+        salairemin = 49000;
+        break;
+        case 53:
+        classe = 16;
+        groupe = "H";
+        salairemin = 49000;
+        break;
+        case 52:
+        classe = 16;
+        groupe = "H";
+        salairemin = 49000;
+        break;
+        case 51:
+        classe = 15;
+        groupe = "H";
+        salairemin = 44000;
+        break;
+        case 50:
+        classe = 15;
+        groupe = "H";
+        salairemin = 44000;
+        break;
+        case 49:
+        classe = 15;
+        groupe = "H";
+        salairemin = 44000;
+        break;
+        case 48:
+        classe = 14;
+        groupe = "G";
+        salairemin = 41000;
+        break;
+        case 47:
+        classe = 14;
+        groupe = "G";
+        salairemin = 41000;
+        break;
+        case 46:
+        classe = 14;
+        groupe = "G";
+        salairemin = 41000;
+        break;
+        case 45:
+        classe = 13;
+        groupe = "G";
+        salairemin = 37400;
+        break;
+        case 44:
+        classe = 13;
+        groupe = "G";
+        salairemin = 37400;
+        break;
+        case 43:
+        classe = 13;
+        groupe = "G";
+        salairemin = 37400;
+        break;
+        case 42:
+        classe = 12;
+        groupe = "F";
+        salairemin = 34300;
+        break;
+        case 41:
+        classe = 12;
+        groupe = "F";
+        salairemin = 34300;
+        break;
+        case 40:
+        classe = 12;
+        groupe = "F";
+        salairemin = 34300;
+        break;
+        case 39:
+        classe = 11;
+        groupe = "F";
+        salairemin = 32500;
+        break;
+        case 38:
+        classe = 11;
+        groupe = "F";
+        salairemin = 32500;
+        break;
+        case 37:
+        classe = 11;
+        groupe = "F";
+        salairemin = 32500;
+        break;
+        case 36:
+        classe = 10;
+        groupe = "E";
+        salairemin = 31400;
+        break;
+        case 35:
+        classe = 10;
+        groupe = "E";
+        salairemin = 31400;
+        break;
+        case 34:
+        classe = 10;
+        groupe = "E";
+        salairemin = 31400;
+        break;
+        case 33:
+        classe = 9;
+        groupe = "E";
+        salairemin = 28400;
+        break;
+        case 32:
+        classe = 9;
+        groupe = "E";
+        salairemin = 28400;
+        break;
+        case 31:
+        classe = 9;
+        groupe = "E";
+        salairemin = 28400;
+        break;
+        case 30:
+        classe = 8;
+        groupe = "D";
+        salairemin = 26400;
+        break;
+        case 29:
+        classe = 8;
+        groupe = "D";
+        salairemin = 26400;
+        break;
+        case 28:
+        classe = 8;
+        groupe = "D";
+        salairemin = 26400;
+        break;
+        case 27:
+        classe = 7;
+        groupe = "D";
+        salairemin = 24400;
+        break;
+        case 26:
+        classe = 7;
+        groupe = "D";
+        salairemin = 24400;
+        break;
+        case 25:
+        classe = 7;
+        groupe = "D";
+        salairemin = 24400;
+        break;
+        case 24:
+        classe = 6;
+        groupe = "C";
+        salairemin = 23500;
+        break;
+        case 23:
+        classe = 6;
+        groupe = "C";
+        salairemin = 23500;
+        break;
+        case 22:
+        classe = 6;
+        groupe = "C";
+        salairemin = 23500;
+        break;
+        case 21:
+        classe = 5;
+        groupe = "C";
+        salairemin = 22300;
+        break;
+        case 20:
+        classe = 5;
+        groupe = "C";
+        salairemin = 22300;
+        break;
+        case 19:
+        classe = 5;
+        groupe = "C";
+        salairemin = 22300;
+        break;
+        case 18:
+        classe = 4;
+        groupe = "B";
+        salairemin = 21200;
+        break;
+        case 17:
+        classe = 4;
+        groupe = "B";
+        salairemin = 21200;
+        break;
+        case 16:
+        classe = 4;
+        groupe = "B";
+        salairemin = 21200;
+        break;
+        case 15:
+        classe = 3;
+        groupe = "B";
+        salairemin = 20300;
+        break;
+        case 14:
+        classe = 3;
+        groupe = "B";
+        salairemin = 20300;
+        break;
+        case 13:
+        classe = 3;
+        groupe = "B";
+        salairemin = 20300;
+        break;
+        case 12:
+        classe = 2;
+        groupe = "A";
+        salairemin = 19700;
+        break;
+        case 11:
+        classe = 2;
+        groupe = "A";
+        salairemin = 19700;
+        break;
+        case 10:
+        classe = 2;
+        groupe = "A";
+        salairemin = 19700;
+        break;
+        case 9:
+        classe = 1;
+        groupe = "A";
+        salairemin = 19420;
+        break;
+        case 8:
+        classe = 1;
+        groupe = "A";
+        salairemin = 19420;
+        break;
+        case 7:
+        classe = 1;
+        groupe = "A";
+        salairemin = 19420;
+        break;
+        case 6:
+        classe = 1;
+        groupe = "A";
+        salairemin = 19420;
+        break;
+        default:
+        classe = "Erreur";
+        groupe = "Erreur";
+        salairemin = "Erreur";
+    }
+    document.getElementById('classe').innerHTML = classe;
+    document.getElementById('groupe').innerHTML = groupe;
+    document.getElementById('salairemin').innerHTML = salairemin;
+    if (resultat > 36)
+    {
+        document.getElementById("statut").innerHTML = 'Cadre';
+        document.getElementById("prime").innerHTML = 'Pas de prime (Cadre)';
+    }
+    else if (resultat > 21 && resultat < 37)
+    {
+        document.getElementById("statut").innerHTML = 'Non Cadre<br/>mais<br/>ex Article 36 :<br/>passage Cadre ?';
+        document.getElementById("prime").innerHTML = document.getElementById('classe').innerHTML + '<br/>* valeur du point<br/>* ancienneté';
+    }
+    else
+    {
+        document.getElementById("statut").innerHTML = 'Non Cadre';
+        document.getElementById("prime").innerHTML = document.getElementById('classe').innerHTML + '<br/>* valeur du point<br/>* ancienneté';
+    }
+    var connaissances = vecteur[1];
+    switch (connaissances)
+    {
+        case 1:
+            document.getElementById("exconn").innerHTML = 'Sans objet';
+            break;
+        case 2 :
+            document.getElementById("exconn").innerHTML = 'Sans objet';
+            break;
+        case 3 :
+            document.getElementById("exconn").innerHTML = 'CAP, BEP';
+            break;
+        case 4 :
+            document.getElementById("exconn").innerHTML = 'BP, BT, Bac Pro ou Techno';
+            break;
+        case 5 :
+            document.getElementById("exconn").innerHTML = 'BTS, DUT';
+            break;
+        case 6 :
+            document.getElementById("exconn").innerHTML = 'BTS, DUT, Licence';
+            break;
+        case 7 :
+            document.getElementById("exconn").innerHTML = 'Master';
+            break;
+        case 8 :
+            document.getElementById("exconn").innerHTML = 'Master, Doctorat';
+            break;
+        case 9 :
+            document.getElementById("exconn").innerHTML = 'Master, Doctorat';
+            break;
+        case 10 :
+            document.getElementById("exconn").innerHTML = 'Master, Doctorat';
+            break;
+        default:
+            document.getElementById("exconn").innerHTML = 'Erreur';
+            break;
+    }
+    data = [{
+        type: 'scatterpolar',
+        r: [vecteur[0], vecteur[1], vecteur[2], vecteur[3], vecteur[4], vecteur[5], vecteur[0]],
+        theta: ['complexité','connaissances','autonomie', 'contribution', 'encadrement/coopération', 'communication', 'complexité'],
+        fill: 'toself',
+        hoverinfo: 'skip'
+    }]
+    layout = {
+        polar: {
+            radialaxis: {
+                visible: true,
+                range: [1, 10],
+                ticks: '',
+                showline: false,
+                showticklabels: false,
+                layer: 'below traces',
+                fixedrange: true
+            }
+        },
+        showlegend: false,
+        title: {
+            text: 'Cotation ' + resultat + ' - Groupe ' +  groupe + ' - Classe ' + classe
+        },
+        autosize: true,
+        font: {
+            color: '#cdcccc'
+        },
+        paper_bgcolor: '#1e1e1e'
+    }
+    config = {
+        staticPlot: true,
+        responsive: true
+    }
+    Plotly.newPlot("radar", data, layout, config);
+    document.getElementById("matable").style.visibility = 'visible';
+    document.getElementById("fileToLoad").value = null;
 }
 function saveTextAsFile() {
     var verification = parseInt(document.getElementById("complexite").value) * parseInt(document.getElementById("connaissances").value) * parseInt(document.getElementById("autonomie").value) * parseInt(document.getElementById("contribution").value) * parseInt(document.getElementById("encadrementcooperation").value) * parseInt(document.getElementById("communication").value);
@@ -418,13 +443,19 @@ function destroyClickedElement(event)
 function readFile()
 {
     document.getElementById("Messages").innerHTML = "";
+    document.getElementById("complexite").selectedIndex = 0;
+    document.getElementById("connaissances").selectedIndex = 0;
+    document.getElementById("autonomie").selectedIndex = 0;
+    document.getElementById("contribution").selectedIndex = 0;
+    document.getElementById("encadrementcooperation").selectedIndex = 0;
+    document.getElementById("communication").selectedIndex = 0;
     var file = document.getElementById("fileToLoad").files;
     if (file.length > 0)
     {
         var fileReader = new FileReader();
         fileReader.readAsText(file[0]);
         fileReader.onload = function() {
-            document.getElementById("Messages").innerHTML += "<br/>Chargement de : " + file[0].name;
+            document.getElementById("Messages").innerHTML += "Chargement de : " + file[0].name + "<br/>";
             var lignes = fileReader.result.split("\n");
             var ligne = lignes[0].split(";");
             var verification = 1;
@@ -434,493 +465,14 @@ function readFile()
             }
             if (verification != 0)
             {
-                var resultat = 0;
-                for (var n = 0; n < ligne.length; n++)
-                {
-                    resultat += parseInt(ligne[n]);
-                }
-                document.getElementById('cotation').innerHTML =  resultat;
-                var classe = 0;
-                var groupe = "non défini";
-                switch(resultat) {
-                    case 60:
-                    classe = 18;
-                    groupe = "I";
-                    document.getElementById('classe').innerHTML = 18;
-                    document.getElementById('groupe').innerHTML = "I";
-                    document.getElementById('salairemin').innerHTML = 64500;
-                    break;
-                    case 59:
-                    classe = 18;
-                    groupe = "I";
-                    document.getElementById('classe').innerHTML = 18;
-                    document.getElementById('groupe').innerHTML = "I";
-                    document.getElementById('salairemin').innerHTML = 64500;
-                    break;
-                    case 58:
-                    classe = 18;
-                    groupe = "I";
-                    document.getElementById('classe').innerHTML = 18;
-                    document.getElementById('groupe').innerHTML = "I";
-                    document.getElementById('salairemin').innerHTML = 64500;
-                    break;
-                    case 57:
-                    classe = 17;
-                    groupe = "I";
-                    document.getElementById('classe').innerHTML = 17;
-                    document.getElementById('groupe').innerHTML = "I";
-                    document.getElementById('salairemin').innerHTML = 56000;
-                    break;
-                    case 56:
-                    classe = 17;
-                    groupe = "I";
-                    document.getElementById('classe').innerHTML = 17;
-                    document.getElementById('groupe').innerHTML = "I";
-                    document.getElementById('salairemin').innerHTML = 56000;
-                    break;
-                    case 55:
-                    classe = 17;
-                    groupe = "I";
-                    document.getElementById('classe').innerHTML = 17;
-                    document.getElementById('groupe').innerHTML = "I";
-                    document.getElementById('salairemin').innerHTML = 56000;
-                    break;
-                    case 54:
-                    classe = 16;
-                    groupe = "H";
-                    document.getElementById('classe').innerHTML = 16;
-                    document.getElementById('groupe').innerHTML = "H";
-                    document.getElementById('salairemin').innerHTML = 49000;
-                    break;
-                    case 53:
-                    classe = 16;
-                    groupe = "H";
-                    document.getElementById('classe').innerHTML = 16;
-                    document.getElementById('groupe').innerHTML = "H";
-                    document.getElementById('salairemin').innerHTML = 49000;
-                    break;
-                    case 52:
-                    classe = 16;
-                    groupe = "H";
-                    document.getElementById('classe').innerHTML = 16;
-                    document.getElementById('groupe').innerHTML = "H";
-                    document.getElementById('salairemin').innerHTML = 49000;
-                    break;
-                    case 51:
-                    classe = 15;
-                    groupe = "H";
-                    document.getElementById('classe').innerHTML = 15;
-                    document.getElementById('groupe').innerHTML = "H";
-                    document.getElementById('salairemin').innerHTML = 44000;
-                    break;
-                    case 50:
-                    classe = 15;
-                    groupe = "H";
-                    document.getElementById('classe').innerHTML = 15;
-                    document.getElementById('groupe').innerHTML = "H";
-                    document.getElementById('salairemin').innerHTML = 44000;
-                    break;
-                    case 49:
-                    classe = 15;
-                    groupe = "H";
-                    document.getElementById('classe').innerHTML = 15;
-                    document.getElementById('groupe').innerHTML = "H";
-                    document.getElementById('salairemin').innerHTML = 44000;
-                    break;
-                    case 48:
-                    classe = 14;
-                    groupe = "G";
-                    document.getElementById('classe').innerHTML = 14;
-                    document.getElementById('groupe').innerHTML = "G";
-                    document.getElementById('salairemin').innerHTML = 41000;
-                    break;
-                    case 47:
-                    classe = 14;
-                    groupe = "G";
-                    document.getElementById('classe').innerHTML = 14;
-                    document.getElementById('groupe').innerHTML = "G";
-                    document.getElementById('salairemin').innerHTML = 41000;
-                    break;
-                    case 46:
-                    classe = 14;
-                    groupe = "G";
-                    document.getElementById('classe').innerHTML = 14;
-                    document.getElementById('groupe').innerHTML = "G";
-                    document.getElementById('salairemin').innerHTML = 41000;
-                    break;
-                    case 45:
-                    classe = 13;
-                    groupe = "G";
-                    document.getElementById('classe').innerHTML = 13;
-                    document.getElementById('groupe').innerHTML = "G";
-                    document.getElementById('salairemin').innerHTML = 37400;
-                    break;
-                    case 44:
-                    classe = 13;
-                    groupe = "G";
-                    document.getElementById('classe').innerHTML = 13;
-                    document.getElementById('groupe').innerHTML = "G";
-                    document.getElementById('salairemin').innerHTML = 37400;
-                    break;
-                    case 43:
-                    classe = 13;
-                    groupe = "G";
-                    document.getElementById('classe').innerHTML = 13;
-                    document.getElementById('groupe').innerHTML = "G";
-                    document.getElementById('salairemin').innerHTML = 37400;
-                    break;
-                    case 42:
-                    classe = 12;
-                    groupe = "F";
-                    document.getElementById('classe').innerHTML = 12;
-                    document.getElementById('groupe').innerHTML = "F";
-                    document.getElementById('salairemin').innerHTML = 34300;
-                    break;
-                    case 41:
-                    classe = 12;
-                    groupe = "F";
-                    document.getElementById('classe').innerHTML = 12;
-                    document.getElementById('groupe').innerHTML = "F";
-                    document.getElementById('salairemin').innerHTML = 34300;
-                    break;
-                    case 40:
-                    classe = 12;
-                    groupe = "F";
-                    document.getElementById('classe').innerHTML = 12;
-                    document.getElementById('groupe').innerHTML = "F";
-                    document.getElementById('salairemin').innerHTML = 34300;
-                    break;
-                    case 39:
-                    classe = 11;
-                    groupe = "F";
-                    document.getElementById('classe').innerHTML = 11;
-                    document.getElementById('groupe').innerHTML = "F";
-                    document.getElementById('salairemin').innerHTML = 32500;
-                    break;
-                    case 38:
-                    classe = 11;
-                    groupe = "F";
-                    document.getElementById('classe').innerHTML = 11;
-                    document.getElementById('groupe').innerHTML = "F";
-                    document.getElementById('salairemin').innerHTML = 32500;
-                    break;
-                    case 37:
-                    classe = 11;
-                    groupe = "F";
-                    document.getElementById('classe').innerHTML = 11;
-                    document.getElementById('groupe').innerHTML = "F";
-                    document.getElementById('salairemin').innerHTML = 32500;
-                    break;
-                    case 36:
-                    classe = 10;
-                    groupe = "E";
-                    document.getElementById('classe').innerHTML = 10;
-                    document.getElementById('groupe').innerHTML = "E";
-                    document.getElementById('salairemin').innerHTML = 31400;
-                    break;
-                    case 35:
-                    classe = 10;
-                    groupe = "E";
-                    document.getElementById('classe').innerHTML = 10;
-                    document.getElementById('groupe').innerHTML = "E";
-                    document.getElementById('salairemin').innerHTML = 31400;
-                    break;
-                    case 34:
-                    classe = 10;
-                    groupe = "E";
-                    document.getElementById('classe').innerHTML = 10;
-                    document.getElementById('groupe').innerHTML = "E";
-                    document.getElementById('salairemin').innerHTML = 31400;
-                    break;
-                    case 33:
-                    classe = 9;
-                    groupe = "E";
-                    document.getElementById('classe').innerHTML = 9;
-                    document.getElementById('groupe').innerHTML = "E";
-                    document.getElementById('salairemin').innerHTML = 28400;
-                    break;
-                    case 32:
-                    classe = 9;
-                    groupe = "E";
-                    document.getElementById('classe').innerHTML = 9;
-                    document.getElementById('groupe').innerHTML = "E";
-                    document.getElementById('salairemin').innerHTML = 28400;
-                    break;
-                    case 31:
-                    classe = 9;
-                    groupe = "E";
-                    document.getElementById('classe').innerHTML = 9;
-                    document.getElementById('groupe').innerHTML = "E";
-                    document.getElementById('salairemin').innerHTML = 28400;
-                    break;
-                    case 30:
-                    classe = 8;
-                    groupe = "D";
-                    document.getElementById('classe').innerHTML = 8;
-                    document.getElementById('groupe').innerHTML = "D";
-                    document.getElementById('salairemin').innerHTML = 26400;
-                    break;
-                    case 29:
-                    classe = 8;
-                    groupe = "D";
-                    document.getElementById('classe').innerHTML = 8;
-                    document.getElementById('groupe').innerHTML = "D";
-                    document.getElementById('salairemin').innerHTML = 26400;
-                    break;
-                    case 28:
-                    classe = 8;
-                    groupe = "D";
-                    document.getElementById('classe').innerHTML = 8;
-                    document.getElementById('groupe').innerHTML = "D";
-                    document.getElementById('salairemin').innerHTML = 26400;
-                    break;
-                    case 27:
-                    classe = 7;
-                    groupe = "D";
-                    document.getElementById('classe').innerHTML = 7;
-                    document.getElementById('groupe').innerHTML = "D";
-                    document.getElementById('salairemin').innerHTML = 24400;
-                    break;
-                    case 26:
-                    classe = 7;
-                    groupe = "D";
-                    document.getElementById('classe').innerHTML = 7;
-                    document.getElementById('groupe').innerHTML = "D";
-                    document.getElementById('salairemin').innerHTML = 24400;
-                    break;
-                    case 25:
-                    classe = 7;
-                    groupe = "D";
-                    document.getElementById('classe').innerHTML = 7;
-                    document.getElementById('groupe').innerHTML = "D";
-                    document.getElementById('salairemin').innerHTML = 24400;
-                    break;
-                    case 24:
-                    classe = 6;
-                    groupe = "C";
-                    document.getElementById('classe').innerHTML = 6;
-                    document.getElementById('groupe').innerHTML = "C";
-                    document.getElementById('salairemin').innerHTML = 23500;
-                    break;
-                    case 23:
-                    classe = 6;
-                    groupe = "C";
-                    document.getElementById('classe').innerHTML = 6;
-                    document.getElementById('groupe').innerHTML = "C";
-                    document.getElementById('salairemin').innerHTML = 23500;
-                    break;
-                    case 22:
-                    classe = 6;
-                    groupe = "C";
-                    document.getElementById('classe').innerHTML = 6;
-                    document.getElementById('groupe').innerHTML = "C";
-                    document.getElementById('salairemin').innerHTML = 23500;
-                    break;
-                    case 21:
-                    classe = 5;
-                    groupe = "C";
-                    document.getElementById('classe').innerHTML = 5;
-                    document.getElementById('groupe').innerHTML = "C";
-                    document.getElementById('salairemin').innerHTML = 22300;
-                    break;
-                    case 20:
-                    classe = 5;
-                    groupe = "C";
-                    document.getElementById('classe').innerHTML = 5;
-                    document.getElementById('groupe').innerHTML = "C";
-                    document.getElementById('salairemin').innerHTML = 22300;
-                    break;
-                    case 19:
-                    classe = 5;
-                    groupe = "C";
-                    document.getElementById('classe').innerHTML = 5;
-                    document.getElementById('groupe').innerHTML = "C";
-                    document.getElementById('salairemin').innerHTML = 22300;
-                    break;
-                    case 18:
-                    classe = 4;
-                    groupe = "B";
-                    document.getElementById('classe').innerHTML = 4;
-                    document.getElementById('groupe').innerHTML = "B";
-                    document.getElementById('salairemin').innerHTML = 21200;
-                    break;
-                    case 17:
-                    classe = 4;
-                    groupe = "B";
-                    document.getElementById('classe').innerHTML = 4;
-                    document.getElementById('groupe').innerHTML = "B";
-                    document.getElementById('salairemin').innerHTML = 21200;
-                    break;
-                    case 16:
-                    classe = 4;
-                    groupe = "B";
-                    document.getElementById('classe').innerHTML = 4;
-                    document.getElementById('groupe').innerHTML = "B";
-                    document.getElementById('salairemin').innerHTML = 21200;
-                    break;
-                    case 15:
-                    classe = 3;
-                    groupe = "B";
-                    document.getElementById('classe').innerHTML = 3;
-                    document.getElementById('groupe').innerHTML = "B";
-                    document.getElementById('salairemin').innerHTML = 20300;
-                    break;
-                    case 14:
-                    classe = 3;
-                    groupe = "B";
-                    document.getElementById('classe').innerHTML = 3;
-                    document.getElementById('groupe').innerHTML = "B";
-                    document.getElementById('salairemin').innerHTML = 20300;
-                    break;
-                    case 13:
-                    classe = 3;
-                    groupe = "B";
-                    document.getElementById('classe').innerHTML = 3;
-                    document.getElementById('groupe').innerHTML = "B";
-                    document.getElementById('salairemin').innerHTML = 20300;
-                    break;
-                    case 12:
-                    classe = 2;
-                    groupe = "A";
-                    document.getElementById('classe').innerHTML = 2;
-                    document.getElementById('groupe').innerHTML = "A";
-                    document.getElementById('salairemin').innerHTML = 19700;
-                    break;
-                    case 11:
-                    classe = 2;
-                    groupe = "A";
-                    document.getElementById('classe').innerHTML = 2;
-                    document.getElementById('groupe').innerHTML = "A";
-                    document.getElementById('salairemin').innerHTML = 19700;
-                    break;
-                    case 10:
-                    classe = 2;
-                    groupe = "A";
-                    document.getElementById('classe').innerHTML = 2;
-                    document.getElementById('groupe').innerHTML = "A";
-                    document.getElementById('salairemin').innerHTML = 19700;
-                    break;
-                    case 9:
-                    classe = 1;
-                    groupe = "A";
-                    document.getElementById('classe').innerHTML = 1;
-                    document.getElementById('groupe').innerHTML = "A";
-                    document.getElementById('salairemin').innerHTML = 19420;
-                    break;
-                    case 8:
-                    classe = 1;
-                    groupe = "A";
-                    document.getElementById('classe').innerHTML = 1;
-                    document.getElementById('groupe').innerHTML = "A";
-                    document.getElementById('salairemin').innerHTML = 19420;
-                    break;
-                    case 7:
-                    classe = 1;
-                    groupe = "A";
-                    document.getElementById('classe').innerHTML = 1;
-                    document.getElementById('groupe').innerHTML = "A";
-                    document.getElementById('salairemin').innerHTML = 19420;
-                    break;
-                    case 6:
-                    classe = 1;
-                    groupe = "A";
-                    document.getElementById('classe').innerHTML = 1;
-                    document.getElementById('groupe').innerHTML = "A";
-                    document.getElementById('salairemin').innerHTML = 19420;
-                    break;
-                    default:
-                    classe = "Erreur";
-                    groupe = "Erreur";
-                    document.getElementById('classe').innerHTML = "Erreur";
-                    document.getElementById('groupe').innerHTML = "Erreur";
-                    document.getElementById('salairemin').innerHTML = "Erreur";
-                }
-                if (resultat > 36)
-                {
-                    document.getElementById("statut").innerHTML = 'Cadre';
-                    document.getElementById("prime").innerHTML = 'Pas de prime (Cadre)';
-                }
-                else if (resultat > 21 && resultat < 37)
-                {
-                    document.getElementById("statut").innerHTML = 'Non Cadre<br/>mais<br/>ex Article 36 :<br/>passage Cadre ?';
-                    document.getElementById("prime").innerHTML = document.getElementById('classe').innerHTML + '<br/>* valeur du point<br/>* ancienneté';
-                }
-                else {
-                    document.getElementById("statut").innerHTML = 'Non Cadre';
-                    document.getElementById("prime").innerHTML = document.getElementById('classe').innerHTML + '<br/>* valeur du point<br/>* ancienneté';
-                }
-                switch (parseInt(ligne[1])) {
-                    case 1:
-                        document.getElementById("exconn").innerHTML = 'Sans objet';
-                        break;
-                    case 2 :
-                        document.getElementById("exconn").innerHTML = 'Sans objet';
-                        break;
-                    case 3 :
-                        document.getElementById("exconn").innerHTML = 'CAP, BEP';
-                        break;
-                    case 4 :
-                        document.getElementById("exconn").innerHTML = 'BP, BT, Bac Pro ou Techno';
-                        break;
-                    case 5 :
-                        document.getElementById("exconn").innerHTML = 'BTS, DUT';
-                        break;
-                    case 6 :
-                        document.getElementById("exconn").innerHTML = 'BTS, DUT, Licence';
-                        break;
-                    case 7 :
-                        document.getElementById("exconn").innerHTML = 'Master';
-                        break;
-                    case 8 :
-                        document.getElementById("exconn").innerHTML = 'Master, Doctorat';
-                        break;
-                    case 9 :
-                        document.getElementById("exconn").innerHTML = 'Master, Doctorat';
-                        break;
-                    case 10 :
-                        document.getElementById("exconn").innerHTML = 'Master, Doctorat';
-                        break;
-                    default:
-                        document.getElementById("exconn").innerHTML = 'Erreur';
-                        break;
-                }
-                data = [{
-                    type: 'scatterpolar',
-                    r: [ligne[0],ligne[1],ligne[2],ligne[3],ligne[4],ligne[5]],
-                    theta: ['complexité','connaissances','autonomie', 'contribution', 'encadrement/coopération', 'communication'],
-                    fill: 'toself',
-                    hoverinfo: 'skip'
-                }]
-                layout = {
-                    polar: {
-                        radialaxis: {
-                            visible: true,
-                            range: [1, 10],
-                            ticks: '',
-                            showline: false,
-                            showticklabels: false,
-                            layer: 'below traces',
-                            fixedrange: true
-                        }
-                    },
-                    showlegend: false,
-                    title: {
-                        text: 'Cotation ' + resultat + ' - Groupe ' +  groupe + ' - Classe ' + classe
-                    },
-                    autosize: true,
-                    font: {
-                        color: '#cdcccc'
-                    },
-                    paper_bgcolor: '#1e1e1e',
-                }
-                config = {
-                    staticPlot: true,
-                    responsive: true
-                }
-                document.getElementById("Messages").innerHTML += "<hr/>";
-                Plotly.newPlot("radar", data, layout, config);
-                document.getElementById("fileToLoad").value = null;
-                document.getElementById("matable").style.visibility = 'visible';
+                var vecteur = [];
+                vecteur.push(parseInt(ligne[0]));
+                vecteur.push(parseInt(ligne[1]));
+                vecteur.push(parseInt(ligne[2]));
+                vecteur.push(parseInt(ligne[3]));
+                vecteur.push(parseInt(ligne[4]));
+                vecteur.push(parseInt(ligne[5]));
+                calcul(vecteur);
             }
             else {
                 document.getElementById("Messages").innerHTML += "<br/>Erreur : au moins un critère non renseigné, ou fichier invalide !";
@@ -940,6 +492,13 @@ function readFiles()
     document.getElementById('groupe').innerHTML = "";
     document.getElementById('salairemin').innerHTML = "";
     document.getElementById("Messages").innerHTML = "";
+    document.getElementById("Messages").innerHTML = "";
+    document.getElementById("complexite").selectedIndex = 0;
+    document.getElementById("connaissances").selectedIndex = 0;
+    document.getElementById("autonomie").selectedIndex = 0;
+    document.getElementById("contribution").selectedIndex = 0;
+    document.getElementById("encadrementcooperation").selectedIndex = 0;
+    document.getElementById("communication").selectedIndex = 0;
     const files = document.getElementById("filesToLoad").files;
     document.getElementById("Messages").innerHTML += "Chargement de : " + files.length + " fichier(s).";
     var data = [];
@@ -989,6 +548,7 @@ function readFiles()
     var tcontribution = [];
     var tenccoop = [];
     var tcommunication = [];
+    var tcotation = [];
     Object.keys(files).forEach(i => {
             const file = files[i];
             document.getElementById("Messages").innerHTML += "<br/>Chargement de : " + file.name;
@@ -1002,16 +562,18 @@ function readFiles()
             tcontribution.push(parseInt(ligne[3]));
             tenccoop.push(parseInt(ligne[4]));
             tcommunication.push(parseInt(ligne[5]));
+            tcotation.push(parseInt(ligne[0]) + parseInt(ligne[1]) + parseInt(ligne[2]) + parseInt(ligne[3]) + parseInt(ligne[4]) + parseInt(ligne[5]));
             data.push({
                 type: 'scatterpolar',
-                r: [parseInt(ligne[0]),parseInt(ligne[1]),parseInt(ligne[2]),parseInt(ligne[3]),parseInt(ligne[4]),parseInt(ligne[5])],
-                theta: ['complexité','connaissances','autonomie', 'contribution', 'encadrement/coopération', 'communication'],
+                r: [parseInt(ligne[0]),parseInt(ligne[1]),parseInt(ligne[2]),parseInt(ligne[3]),parseInt(ligne[4]),parseInt(ligne[5]),parseInt(ligne[0])],
+                theta: ['complexité','connaissances','autonomie', 'contribution', 'encadrement/coopération', 'communication', 'complexité'],
                 fill: 'none',
                 hoverinfo: 'name',
                 name: file.name.substring(15, file.name.length-4)
             });            
             if (n === (files.length))
             {
+                Plotly.purge("radar");
                 tcomplexite.sort(function(a, b) {return a - b;});
                 document.getElementById("mincomplexite").innerHTML = tcomplexite[0];
                 document.getElementById("maxcomplexite").innerHTML = tcomplexite[tcomplexite.length-1];
@@ -1042,6 +604,11 @@ function readFiles()
                 document.getElementById("maxcommunication").innerHTML = tcommunication[tcommunication.length-1];
                 document.getElementById("medcommunication").innerHTML = mediane(tcommunication);
                 document.getElementById("moycommunication").innerHTML = Math.round(tcommunication.reduce((a, b) => a + b, 0) / tcommunication.length);
+                tcotation.sort(function(a, b) {return a - b;});
+                document.getElementById("mincotation").innerHTML = tcotation[0];
+                document.getElementById("maxcotation").innerHTML = tcotation[tcotation.length-1];
+                document.getElementById("medcotation").innerHTML = mediane(tcotation);
+                document.getElementById("moycotation").innerHTML = Math.round(tcotation.reduce((a, b) => a + b, 0) / tcotation.length);
                 Plotly.newPlot("radar", data, layout, config);
                 document.getElementById("filesToLoad").value = null;
                 document.getElementById("Statistiques").style.visibility = 'visible';
