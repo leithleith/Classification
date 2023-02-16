@@ -442,7 +442,6 @@ function destroyClickedElement(event)
 }
 function readFile()
 {
-    document.getElementById("Messages").innerHTML = "";
     document.getElementById("complexite").selectedIndex = 0;
     document.getElementById("connaissances").selectedIndex = 0;
     document.getElementById("autonomie").selectedIndex = 0;
@@ -455,7 +454,6 @@ function readFile()
         var fileReader = new FileReader();
         fileReader.readAsText(file[0]);
         fileReader.onload = function() {
-            document.getElementById("Messages").innerHTML += "Chargement de : " + file[0].name + "<br/>";
             var lignes = fileReader.result.split("\n");
             var ligne = lignes[0].split(";");
             var verification = 1;
@@ -475,12 +473,10 @@ function readFile()
                 calcul(vecteur);
             }
             else {
-                document.getElementById("Messages").innerHTML += "<br/>Erreur : au moins un critère non renseigné, ou fichier invalide !";
                 document.getElementById("fileToLoad").value = null;
             }
         }; 
         fileReader.onerror = function() {
-            document.getElementById("Messages").innerHTML += "<br/>Erreur de chargement de : " + file[0].name;
             document.getElementById("fileToLoad").value = null;
         };
     }     
@@ -491,8 +487,6 @@ function readFiles()
     document.getElementById('classe').innerHTML = "";
     document.getElementById('groupe').innerHTML = "";
     document.getElementById('salairemin').innerHTML = "";
-    document.getElementById("Messages").innerHTML = "";
-    document.getElementById("Messages").innerHTML = "";
     document.getElementById("complexite").selectedIndex = 0;
     document.getElementById("connaissances").selectedIndex = 0;
     document.getElementById("autonomie").selectedIndex = 0;
@@ -500,7 +494,6 @@ function readFiles()
     document.getElementById("encadrementcooperation").selectedIndex = 0;
     document.getElementById("communication").selectedIndex = 0;
     const files = document.getElementById("filesToLoad").files;
-    document.getElementById("Messages").innerHTML += "Chargement de : " + files.length + " fichier(s).";
     var data = [];
     var layout = {
             polar: {
@@ -531,7 +524,7 @@ function readFiles()
                   name: 'Passer en plein écran',
                   icon: Plotly.Icons.zoombox,
                   click: function(gd) {
-                    document.getElementById("radar").requestFullscreen();
+                    pleinecran();
                   }}],
             modeBarButtonsToRemove: ['pan2d','select2d','lasso2d','resetScale2d','zoom2d'],
             scrollZoom: false,
@@ -551,7 +544,6 @@ function readFiles()
     var tcotation = [];
     Object.keys(files).forEach(i => {
             const file = files[i];
-            document.getElementById("Messages").innerHTML += "<br/>Chargement de : " + file.name;
             const reader = new FileReader();
             reader.onload = (e) => {
             var lignes = reader.result.split("\n");
@@ -628,4 +620,14 @@ function mediane(arr) {
     {
         return Math.round((arr[middleIndex - 1] + arr[middleIndex]) / 2);
     }
+}
+function pleinecran()
+{
+    document.getElementById("radar").requestFullscreen();
+    document.addEventListener("fullscreenchange", function(event) {
+        if (document.fullscreenElement === null) {            
+            Plotly.relayout('radar', {width: 600, height: 600});
+            Plotly.relayout('radar', {autosize: true});
+        }
+      });
 }
