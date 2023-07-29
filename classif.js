@@ -334,12 +334,12 @@ function calcul(vecteur)
     else if (resultat > 21 && resultat < 37)
     {
         document.getElementById("statut").innerHTML = 'Non Cadre<br/>mais<br/>ex Article 36 :<br/>passage Cadre ?';
-        document.getElementById("prime").innerHTML = document.getElementById('classe').innerHTML + '<br/>* valeur du point<br/>* ancienneté';
+        document.getElementById("prime").innerHTML = calcultaux(document.getElementById('classe').innerHTML) + '<br/>* valeur du point<br/>* ancienneté (max : 15 ans)';
     }
     else
     {
         document.getElementById("statut").innerHTML = 'Non Cadre';
-        document.getElementById("prime").innerHTML = document.getElementById('classe').innerHTML + '<br/>* valeur du point<br/>* ancienneté';
+        document.getElementById("prime").innerHTML = calcultaux(document.getElementById('classe').innerHTML) + '<br/>* valeur du point<br/>* ancienneté (max : 15 ans)';
     }
     var connaissances = vecteur[1];
     switch (connaissances)
@@ -630,4 +630,32 @@ function pleinecran()
             Plotly.relayout('radar', {autosize: true});
         }
       });
+}
+function calcultaux(classe)
+{
+    switch(classe)
+    {
+        case "1":
+            return "1,45";
+        case "2":
+            return "1,6";
+        case "3":
+            return "1,75";
+        case "4":
+            return "1,95";
+        case "5":
+            return "2,2";
+        case "6":
+            return "2,45";
+        case "7":
+            return "2,6";
+        case "8":
+            return "2,9";
+        case "9":
+            return "3,3";
+        case "10":
+            return "3,8";
+        default:
+            return "N/A";
+    }
 }
