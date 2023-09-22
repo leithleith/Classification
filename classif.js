@@ -46,277 +46,277 @@ function calcul(vecteur)
         case 60:
         classe = 18;
         groupe = "I";
-        salairemin = 64500;
+        salairemin = 68000;
         break;
         case 59:
         classe = 18;
         groupe = "I";
-        salairemin = 64500;
+        salairemin = 68000;
         break;
         case 58:
         classe = 18;
         groupe = "I";
-        salairemin = 64500;
+        salairemin = 68000;
         break;
         case 57:
         classe = 17;
         groupe = "I";
-        salairemin = 56000;
+        salairemin = 59300;
         break;
         case 56:
         classe = 17;
         groupe = "I";
-        salairemin = 56000;
+        salairemin = 59300;
         break;
         case 55:
         classe = 17;
         groupe = "I";
-        salairemin = 56000;
+        salairemin = 59300;
         break;
         case 54:
         classe = 16;
         groupe = "H";
-        salairemin = 49000;
+        salairemin = 52000;
         break;
         case 53:
         classe = 16;
         groupe = "H";
-        salairemin = 49000;
+        salairemin = 52000;
         break;
         case 52:
         classe = 16;
         groupe = "H";
-        salairemin = 49000;
+        salairemin = 52000;
         break;
         case 51:
         classe = 15;
         groupe = "H";
-        salairemin = 44000;
+        salairemin = 47000;
         break;
         case 50:
         classe = 15;
         groupe = "H";
-        salairemin = 44000;
+        salairemin = 47000;
         break;
         case 49:
         classe = 15;
         groupe = "H";
-        salairemin = 44000;
+        salairemin = 47000;
         break;
         case 48:
         classe = 14;
         groupe = "G";
-        salairemin = 41000;
+        salairemin = 43900;
         break;
         case 47:
         classe = 14;
         groupe = "G";
-        salairemin = 41000;
+        salairemin = 43900;
         break;
         case 46:
         classe = 14;
         groupe = "G";
-        salairemin = 41000;
+        salairemin = 43900;
         break;
         case 45:
         classe = 13;
         groupe = "G";
-        salairemin = 37400;
+        salairemin = 40000;
         break;
         case 44:
         classe = 13;
         groupe = "G";
-        salairemin = 37400;
+        salairemin = 40000;
         break;
         case 43:
         classe = 13;
         groupe = "G";
-        salairemin = 37400;
+        salairemin = 40000;
         break;
         case 42:
         classe = 12;
         groupe = "F";
-        salairemin = 34300;
+        salairemin = 36700;
         break;
         case 41:
         classe = 12;
         groupe = "F";
-        salairemin = 34300;
+        salairemin = 36700;
         break;
         case 40:
         classe = 12;
         groupe = "F";
-        salairemin = 34300;
+        salairemin = 36700;
         break;
         case 39:
         classe = 11;
         groupe = "F";
-        salairemin = 32500;
+        salairemin = 34900;
         break;
         case 38:
         classe = 11;
         groupe = "F";
-        salairemin = 32500;
+        salairemin = 34900;
         break;
         case 37:
         classe = 11;
         groupe = "F";
-        salairemin = 32500;
+        salairemin = 34900;
         break;
         case 36:
         classe = 10;
         groupe = "E";
-        salairemin = 31400;
+        salairemin = 33700;
         break;
         case 35:
         classe = 10;
         groupe = "E";
-        salairemin = 31400;
+        salairemin = 33700;
         break;
         case 34:
         classe = 10;
         groupe = "E";
-        salairemin = 31400;
+        salairemin = 33700;
         break;
         case 33:
         classe = 9;
         groupe = "E";
-        salairemin = 28400;
+        salairemin = 30500;
         break;
         case 32:
         classe = 9;
         groupe = "E";
-        salairemin = 28400;
+        salairemin = 30500;
         break;
         case 31:
         classe = 9;
         groupe = "E";
-        salairemin = 28400;
+        salairemin = 30500;
         break;
         case 30:
         classe = 8;
         groupe = "D";
-        salairemin = 26400;
+        salairemin = 28450;
         break;
         case 29:
         classe = 8;
         groupe = "D";
-        salairemin = 26400;
+        salairemin = 28450;
         break;
         case 28:
         classe = 8;
         groupe = "D";
-        salairemin = 26400;
+        salairemin = 28450;
         break;
         case 27:
         classe = 7;
         groupe = "D";
-        salairemin = 24400;
+        salairemin = 26400;
         break;
         case 26:
         classe = 7;
         groupe = "D";
-        salairemin = 24400;
+        salairemin = 26400;
         break;
         case 25:
         classe = 7;
         groupe = "D";
-        salairemin = 24400;
+        salairemin = 26400;
         break;
         case 24:
         classe = 6;
         groupe = "C";
-        salairemin = 23500;
+        salairemin = 25550;
         break;
         case 23:
         classe = 6;
         groupe = "C";
-        salairemin = 23500;
+        salairemin = 25550;
         break;
         case 22:
         classe = 6;
         groupe = "C";
-        salairemin = 23500;
+        salairemin = 25550;
         break;
         case 21:
         classe = 5;
         groupe = "C";
-        salairemin = 22300;
+        salairemin = 24250;
         break;
         case 20:
         classe = 5;
         groupe = "C";
-        salairemin = 22300;
+        salairemin = 24250;
         break;
         case 19:
         classe = 5;
         groupe = "C";
-        salairemin = 22300;
+        salairemin = 24250;
         break;
         case 18:
         classe = 4;
         groupe = "B";
-        salairemin = 21200;
+        salairemin = 23400;
         break;
         case 17:
         classe = 4;
         groupe = "B";
-        salairemin = 21200;
+        salairemin = 23400;
         break;
         case 16:
         classe = 4;
         groupe = "B";
-        salairemin = 21200;
+        salairemin = 23400;
         break;
         case 15:
         classe = 3;
         groupe = "B";
-        salairemin = 20300;
+        salairemin = 22450;
         break;
         case 14:
         classe = 3;
         groupe = "B";
-        salairemin = 20300;
+        salairemin = 22450;
         break;
         case 13:
         classe = 3;
         groupe = "B";
-        salairemin = 20300;
+        salairemin = 22450;
         break;
         case 12:
         classe = 2;
         groupe = "A";
-        salairemin = 19700;
+        salairemin = 21850;
         break;
         case 11:
         classe = 2;
         groupe = "A";
-        salairemin = 19700;
+        salairemin = 21850;
         break;
         case 10:
         classe = 2;
         groupe = "A";
-        salairemin = 19700;
+        salairemin = 21850;
         break;
         case 9:
         classe = 1;
         groupe = "A";
-        salairemin = 19420;
+        salairemin = 21700;
         break;
         case 8:
         classe = 1;
         groupe = "A";
-        salairemin = 19420;
+        salairemin = 21700;
         break;
         case 7:
         classe = 1;
         groupe = "A";
-        salairemin = 19420;
+        salairemin = 21700;
         break;
         case 6:
         classe = 1;
         groupe = "A";
-        salairemin = 19420;
+        salairemin = 21700;
         break;
         default:
         classe = "Erreur";
