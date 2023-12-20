@@ -49,6 +49,20 @@ button {
 .matable tr:nth-child(odd) {
     background-color: #555555;
 }
+.matable2 {
+    text-align: center;
+    vertical-align: middle;
+}
+.matable2 thead {
+    background-color: #555555;    
+}
+.matable2 td {
+    padding: 5px;
+    word-wrap: break-word;
+} 
+.matable2 tr:nth-child(even) {
+    background-color: #555555;
+}
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;
@@ -76,3 +90,9 @@ button {
  .tabcontent {
     display: none;
   }
+  #mini, #grillemini { display: none }
+  #mini:checked + #grillemini { display: block }
+  #tauxprime, #grilletaux { display: none }
+  #tauxprime:checked + #grilletaux { display: block }
+  #pointprime, #grillepoint { display: none }
+  #pointprime:checked + #grillepoint { display: block }

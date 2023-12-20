@@ -326,6 +326,8 @@ function calcul(vecteur)
     document.getElementById('classe').innerHTML = classe;
     document.getElementById('groupe').innerHTML = groupe;
     document.getElementById('salairemin').innerHTML = salairemin;
+    document.getElementById('labelprime').innerHTML = "Prime d'ancienneté";
+    document.getElementById('prime').innerHTML = "";
     if (resultat > 36)
     {
         document.getElementById("statut").innerHTML = 'Cadre';
