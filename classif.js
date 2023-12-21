@@ -410,8 +410,25 @@ function calcul(vecteur)
         paper_bgcolor: '#1e1e1e'
     }
     config = {
-        staticPlot: true,
-        responsive: true
+       // staticPlot: true,
+        responsive: true,
+        displayModeBar: true,
+        displaylogo: false,
+        locale: 'fr',
+        modeBarButtonsToAdd: [
+            {
+                name: 'Passer en plein écran',
+                icon: Plotly.Icons.zoombox,
+                click: function(gd) {
+                pleinecran();
+                }}],
+        modeBarButtonsToRemove: ['pan2d','select2d','lasso2d','resetScale2d','zoom2d'],
+        scrollZoom: false,
+        toImageButtonOptions: {
+            filename: 'Classification-analyse-groupe-' + Date.now(),
+            height: 800,
+            width: 800
+        }
     }
     Plotly.newPlot("radar", data, layout, config);
     document.getElementById("matable").style.visibility = 'visible';
