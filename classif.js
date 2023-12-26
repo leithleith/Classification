@@ -41,291 +41,68 @@ function calcul(vecteur)
     var classe;
     var groupe;
     var salairemin;
-    switch(resultat)
-    {
-        case 60:
-        classe = 18;
-        groupe = "I";
-        salairemin = 68000;
-        break;
-        case 59:
-        classe = 18;
-        groupe = "I";
-        salairemin = 68000;
-        break;
-        case 58:
-        classe = 18;
-        groupe = "I";
-        salairemin = 68000;
-        break;
-        case 57:
-        classe = 17;
-        groupe = "I";
-        salairemin = 59300;
-        break;
-        case 56:
-        classe = 17;
-        groupe = "I";
-        salairemin = 59300;
-        break;
-        case 55:
-        classe = 17;
-        groupe = "I";
-        salairemin = 59300;
-        break;
-        case 54:
-        classe = 16;
-        groupe = "H";
-        salairemin = 52000;
-        break;
-        case 53:
-        classe = 16;
-        groupe = "H";
-        salairemin = 52000;
-        break;
-        case 52:
-        classe = 16;
-        groupe = "H";
-        salairemin = 52000;
-        break;
-        case 51:
-        classe = 15;
-        groupe = "H";
-        salairemin = 47000;
-        break;
-        case 50:
-        classe = 15;
-        groupe = "H";
-        salairemin = 47000;
-        break;
-        case 49:
-        classe = 15;
-        groupe = "H";
-        salairemin = 47000;
-        break;
-        case 48:
-        classe = 14;
-        groupe = "G";
-        salairemin = 43900;
-        break;
-        case 47:
-        classe = 14;
-        groupe = "G";
-        salairemin = 43900;
-        break;
-        case 46:
-        classe = 14;
-        groupe = "G";
-        salairemin = 43900;
-        break;
-        case 45:
-        classe = 13;
-        groupe = "G";
-        salairemin = 40000;
-        break;
-        case 44:
-        classe = 13;
-        groupe = "G";
-        salairemin = 40000;
-        break;
-        case 43:
-        classe = 13;
-        groupe = "G";
-        salairemin = 40000;
-        break;
-        case 42:
-        classe = 12;
-        groupe = "F";
-        salairemin = 36700;
-        break;
-        case 41:
-        classe = 12;
-        groupe = "F";
-        salairemin = 36700;
-        break;
-        case 40:
-        classe = 12;
-        groupe = "F";
-        salairemin = 36700;
-        break;
-        case 39:
-        classe = 11;
-        groupe = "F";
-        salairemin = 34900;
-        break;
-        case 38:
-        classe = 11;
-        groupe = "F";
-        salairemin = 34900;
-        break;
-        case 37:
-        classe = 11;
-        groupe = "F";
-        salairemin = 34900;
-        break;
-        case 36:
-        classe = 10;
-        groupe = "E";
-        salairemin = 33700;
-        break;
-        case 35:
-        classe = 10;
-        groupe = "E";
-        salairemin = 33700;
-        break;
-        case 34:
-        classe = 10;
-        groupe = "E";
-        salairemin = 33700;
-        break;
-        case 33:
-        classe = 9;
-        groupe = "E";
-        salairemin = 30500;
-        break;
-        case 32:
-        classe = 9;
-        groupe = "E";
-        salairemin = 30500;
-        break;
-        case 31:
-        classe = 9;
-        groupe = "E";
-        salairemin = 30500;
-        break;
-        case 30:
-        classe = 8;
-        groupe = "D";
-        salairemin = 28450;
-        break;
-        case 29:
-        classe = 8;
-        groupe = "D";
-        salairemin = 28450;
-        break;
-        case 28:
-        classe = 8;
-        groupe = "D";
-        salairemin = 28450;
-        break;
-        case 27:
-        classe = 7;
-        groupe = "D";
-        salairemin = 26400;
-        break;
-        case 26:
-        classe = 7;
-        groupe = "D";
-        salairemin = 26400;
-        break;
-        case 25:
-        classe = 7;
-        groupe = "D";
-        salairemin = 26400;
-        break;
-        case 24:
-        classe = 6;
-        groupe = "C";
-        salairemin = 25550;
-        break;
-        case 23:
-        classe = 6;
-        groupe = "C";
-        salairemin = 25550;
-        break;
-        case 22:
-        classe = 6;
-        groupe = "C";
-        salairemin = 25550;
-        break;
-        case 21:
-        classe = 5;
-        groupe = "C";
-        salairemin = 24250;
-        break;
-        case 20:
-        classe = 5;
-        groupe = "C";
-        salairemin = 24250;
-        break;
-        case 19:
-        classe = 5;
-        groupe = "C";
-        salairemin = 24250;
-        break;
-        case 18:
-        classe = 4;
-        groupe = "B";
-        salairemin = 23400;
-        break;
-        case 17:
-        classe = 4;
-        groupe = "B";
-        salairemin = 23400;
-        break;
-        case 16:
-        classe = 4;
-        groupe = "B";
-        salairemin = 23400;
-        break;
-        case 15:
-        classe = 3;
-        groupe = "B";
-        salairemin = 22450;
-        break;
-        case 14:
-        classe = 3;
-        groupe = "B";
-        salairemin = 22450;
-        break;
-        case 13:
-        classe = 3;
-        groupe = "B";
-        salairemin = 22450;
-        break;
-        case 12:
-        classe = 2;
-        groupe = "A";
-        salairemin = 21850;
-        break;
-        case 11:
-        classe = 2;
-        groupe = "A";
-        salairemin = 21850;
-        break;
-        case 10:
-        classe = 2;
-        groupe = "A";
-        salairemin = 21850;
-        break;
-        case 9:
-        classe = 1;
-        groupe = "A";
-        salairemin = 21700;
-        break;
-        case 8:
-        classe = 1;
-        groupe = "A";
-        salairemin = 21700;
-        break;
-        case 7:
-        classe = 1;
-        groupe = "A";
-        salairemin = 21700;
-        break;
-        case 6:
-        classe = 1;
-        groupe = "A";
-        salairemin = 21700;
-        break;
-        default:
-        classe = "Erreur";
-        groupe = "Erreur";
-        salairemin = "Erreur";
-    }
-    document.getElementById('classe').innerHTML = classe;
-    document.getElementById('groupe').innerHTML = groupe;
-    document.getElementById('salairemin').innerHTML = salairemin;
+    const hachage = {
+        6: [1,"A",21700],
+        7: [1,"A",21700],
+        8: [1,"A",21700],
+        9: [1,"A",21700],
+        10: [2,"A",21850],
+        11: [2,"A",21850],
+        12: [2,"A",21850],
+        13: [3,"B",22450],
+        14: [3,"B",22450],
+        15: [3,"B",22450],
+        16: [4,"B",23400],
+        17: [4,"B",23400],
+        18: [4,"B",23400],
+        19: [5,"C",24250],
+        20: [5,"C",24250],
+        21: [5,"C",24250],
+        22: [6,"C",25550],
+        23: [6,"C",25550],
+        24: [6,"C",25550],
+        25: [7,"D",26400],
+        26: [7,"D",26400],
+        27: [7,"D",26400],
+        28: [8,"D",28450],
+        29: [8,"D",28450],
+        30: [8,"D",28450],
+        31: [9,"E",30500],
+        32: [9,"E",30500],
+        33: [9,"E",30500],
+        34: [10,"E",33700],
+        35: [10,"E",33700],
+        36: [10,"E",33700],
+        37: [11,"F",34900],
+        38: [11,"F",34900],
+        39: [11,"F",34900],
+        40: [12,"F",36700],
+        41: [12,"F",36700],
+        42: [12,"F",36700],
+        43: [13,"G",40000],
+        44: [13,"G",40000],
+        45: [13,"G",40000],
+        46: [14,"G",43900],
+        47: [14,"G",43900],
+        48: [14,"G",43900],
+        49: [15,"H",47000],
+        50: [15,"H",47000],
+        51: [15,"H",47000],
+        52: [16,"H",52000],
+        53: [16,"H",52000],
+        54: [16,"H",52000],
+        55: [17,"I",59300],
+        56: [17,"I",59300],
+        57: [17,"I",59300],
+        58: [18,"I",68000],
+        59: [18,"I",68000],
+        60: [18,"I",68000]
+    };
+    const tripletdefaut = ["Erreur","Erreur","Erreur"];
+    triplet = hachage[resultat] || tripletdefaut;
+    document.getElementById('classe').innerHTML = triplet[0];
+    document.getElementById('groupe').innerHTML = triplet[1];
+    document.getElementById('salairemin').innerHTML = triplet[2] + " €";
     document.getElementById('labelprime').innerHTML = "Prime d'ancienneté";
     document.getElementById('prime').innerHTML = "";
     if (resultat > 36)
@@ -343,43 +120,19 @@ function calcul(vecteur)
         document.getElementById("statut").innerHTML = 'Non Cadre';
         affichageprime();
     }
-    var connaissances = vecteur[1];
-    switch (connaissances)
-    {
-        case 1:
-            document.getElementById("exconn").innerHTML = 'Sans objet';
-            break;
-        case 2 :
-            document.getElementById("exconn").innerHTML = 'Sans objet';
-            break;
-        case 3 :
-            document.getElementById("exconn").innerHTML = 'CAP, BEP';
-            break;
-        case 4 :
-            document.getElementById("exconn").innerHTML = 'BP, BT, Bac Pro ou Techno';
-            break;
-        case 5 :
-            document.getElementById("exconn").innerHTML = 'BTS, DUT';
-            break;
-        case 6 :
-            document.getElementById("exconn").innerHTML = 'BTS, DUT, Licence';
-            break;
-        case 7 :
-            document.getElementById("exconn").innerHTML = 'Master';
-            break;
-        case 8 :
-            document.getElementById("exconn").innerHTML = 'Master, Doctorat';
-            break;
-        case 9 :
-            document.getElementById("exconn").innerHTML = 'Master, Doctorat';
-            break;
-        case 10 :
-            document.getElementById("exconn").innerHTML = 'Master, Doctorat';
-            break;
-        default:
-            document.getElementById("exconn").innerHTML = 'Erreur';
-            break;
-    }
+    const connaissances = {
+        1: 'Sans objet',
+        2: 'Sans objet',
+        3: 'CAP, BEP',
+        4: 'BP, BT, Bac Pro ou Techno',
+        5: 'BTS, DUT',
+        6: 'BTS, DUT, Licence',
+        7: 'Master',
+        8: 'Master, Doctorat',
+        9: 'Master, Doctorat',
+        10: 'Master, Doctorat'
+    };
+    document.getElementById("exconn").innerHTML = connaissances[vecteur[1]] || "Erreur";    
     data = [{
         type: 'scatterpolar',
         r: [vecteur[0], vecteur[1], vecteur[2], vecteur[3], vecteur[4], vecteur[5], vecteur[0]],
