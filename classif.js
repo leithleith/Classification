@@ -154,7 +154,7 @@ function calcul(vecteur)
         },
         showlegend: false,
         title: {
-            text: 'Cotation ' + resultat + ' - Groupe ' +  groupe + ' - Classe ' + classe
+            text: 'Cotation ' + resultat + ' - Groupe ' +  triplet[0] + ' - Classe ' + triplet[1]
         },
         autosize: true,
         font: {
