@@ -33,14 +33,11 @@ function verification() {
 function calcul(vecteur)
 {
     var resultat = 0;
-    for (i = 0; i < vecteur.length; i++)
+    for (var i = 0; i < vecteur.length; i++)
     {
         resultat += parseInt(vecteur[i]);
     }
     document.getElementById('cotation').innerHTML =  resultat;
-    var classe;
-    var groupe;
-    var salairemin;
     const hachage = {
         6: [1,"A",21700],
         7: [1,"A",21700],
