@@ -405,31 +405,19 @@ function pleinecran()
 }
 function calcultaux(classe)
 {
-    switch(classe)
-    {
-        case "1":
-            return "1,45";
-        case "2":
-            return "1,6";
-        case "3":
-            return "1,75";
-        case "4":
-            return "1,95";
-        case "5":
-            return "2,2";
-        case "6":
-            return "2,45";
-        case "7":
-            return "2,6";
-        case "8":
-            return "2,9";
-        case "9":
-            return "3,3";
-        case "10":
-            return "3,8";
-        default:
-            return "N/A";
-    }
+    const hachagetaux = {
+        1: "1,45",
+        2: "1,6",
+        3: "1,75",
+        4: "1,95",
+        5: "2,2",
+        6: "2,45",
+        7: "2,6",
+        8: "2,9",
+        9: "3,3",
+        10: "3,8"
+    };
+    return hachagetaux[classe] || "Erreur";
 }
 function affichageprime()
 {
